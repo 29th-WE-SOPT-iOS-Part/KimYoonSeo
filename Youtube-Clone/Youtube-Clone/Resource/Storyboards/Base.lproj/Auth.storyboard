@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Sign In View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="SignInViewController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignInViewController" id="BYZ-38-t0r" customClass="LoginViewController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -63,7 +63,7 @@
                                             <constraint firstAttribute="height" constant="60" id="GG4-xD-0eW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -75,6 +75,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gIw-En-hpp"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nMa-PL-tm7">
                                 <rect key="frame" x="20" y="624" width="100" height="48"/>
@@ -84,6 +87,9 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="계정만들기"/>
+                                <connections>
+                                    <action selector="accountButtonDidTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bAz-F8-adw"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -108,15 +114,21 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="ScW-Ip-eZi"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="ibr-Un-ZDp" id="Ukk-Tb-nDu"/>
+                        <outlet property="nameTextField" destination="Vbr-jY-fTV" id="y1E-Hu-eaE"/>
+                        <outlet property="nextButton" destination="rTG-GH-OeC" id="kaV-lf-6eI"/>
+                        <outlet property="passwordTextField" destination="En2-hL-gYT" id="YBg-DG-MEw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="960.86956521739137" y="118.52678571428571"/>
         </scene>
-        <!--View Controller-->
+        <!--Sign Up View Controller-->
         <scene sceneID="lJz-OH-Xed">
             <objects>
-                <viewController id="36j-uR-YFx" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SignUpViewController" id="36j-uR-YFx" customClass="SignUpViewController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Glg-Hb-iyR">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -146,7 +158,7 @@
                                             <constraint firstAttribute="height" constant="60" id="2eH-AE-CYL"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
                                     </textField>
                                 </subviews>
                             </stackView>
@@ -170,19 +182,23 @@
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                 <state key="normal" title="다음"/>
+                                <connections>
+                                    <action selector="nextButtonDidTapped:" destination="36j-uR-YFx" eventType="touchUpInside" id="4Hc-Fz-ADj"/>
+                                </connections>
                             </button>
-                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-gV-0ah">
+                            <button opaque="NO" contentMode="left" contentHorizontalAlignment="leading" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fhm-gV-0ah">
                                 <rect key="frame" x="20" y="574" width="223" height="22"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="223" id="R6H-8o-0ng"/>
                                 </constraints>
                                 <color key="tintColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <inset key="titleEdgeInsets" minX="-90" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                <inset key="imageEdgeInsets" minX="-100" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 <state key="normal" title="비밀번호 표시" image="checkmark.square" catalog="system">
                                     <color key="titleColor" systemColor="systemGray2Color"/>
                                     <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="medium"/>
                                 </state>
+                                <connections>
+                                    <action selector="maskingButtonDidTapped:" destination="36j-uR-YFx" eventType="touchUpInside" id="P4v-Cx-jxJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="htt-ar-V1V"/>
@@ -204,10 +220,71 @@
                             <constraint firstItem="bCm-6V-N7l" firstAttribute="centerY" secondItem="Glg-Hb-iyR" secondAttribute="centerY" id="vkB-rk-c5R"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="WmV-AK-trQ" id="sfU-yA-B9H"/>
+                        <outlet property="maskingButton" destination="fhm-gV-0ah" id="8bW-2Q-XuD"/>
+                        <outlet property="nameTextField" destination="CcT-4V-bsT" id="6Xt-5A-1VQ"/>
+                        <outlet property="nextButton" destination="jPk-Kb-2Qy" id="1Zf-nf-xRZ"/>
+                        <outlet property="passwordTextField" destination="vfr-yp-bty" id="xhh-qJ-6fH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="skH-lS-29G" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1676.8115942028987" y="118.52678571428571"/>
+        </scene>
+        <!--Welcome View Controller-->
+        <scene sceneID="hiC-0y-uao">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" id="Tg6-Fg-I5B" customClass="WelcomeViewController" customModule="Youtube_Clone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Pd6-xd-DOz">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="44" translatesAutoresizingMaskIntoConstraints="NO" id="zAn-C5-ukU">
+                                <rect key="frame" x="20" y="299" width="374" height="298"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="google_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qha-0E-OAN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="62"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="62" id="8Ty-v0-gWf"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="김윤서씨 환영합니당 ㅋㅋ" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cng-gT-gvf">
+                                        <rect key="frame" x="0.0" y="106" width="374" height="100"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="100" id="txJ-Y2-Evv"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fq7-Fp-a0o" customClass="GoogleButton" customModule="Youtube_Clone" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="250" width="374" height="48"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="48" id="J0m-ES-DbD"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="확인"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="88p-az-NAw"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="zAn-C5-ukU" firstAttribute="centerY" secondItem="Pd6-xd-DOz" secondAttribute="centerY" id="DfU-Rp-FeM"/>
+                            <constraint firstAttribute="trailing" secondItem="zAn-C5-ukU" secondAttribute="trailing" constant="20" id="TPT-Nx-L4F"/>
+                            <constraint firstItem="zAn-C5-ukU" firstAttribute="centerX" secondItem="Pd6-xd-DOz" secondAttribute="centerX" id="knN-KM-5oa"/>
+                            <constraint firstItem="zAn-C5-ukU" firstAttribute="leading" secondItem="Pd6-xd-DOz" secondAttribute="leading" constant="20" id="nsB-Pf-bTT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="welcomeLabel" destination="cng-gT-gvf" id="KeL-OV-F8h"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xsT-vW-uLL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2433" y="119"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="SwH-Qv-gLr">
