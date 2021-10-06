@@ -7,15 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD954D50270D544400DD5A9B /* Colors.xcassets */; };
+		DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954D53270D555A00DD5A9B /* GoogleButton.swift */; };
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
 		DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449F27084CD40095570C /* SceneDelegate.swift */; };
 		DDB944A227084CD40095570C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* SignInViewController.swift */; };
 		DDB944A527084CD40095570C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A327084CD40095570C /* Auth.storyboard */; };
 		DDB944A727084CD50095570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A627084CD50095570C /* Assets.xcassets */; };
 		DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A827084CD50095570C /* LaunchScreen.storyboard */; };
+		DDCD5057270D6124004B0A9A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5056270D6124004B0A9A /* Color.swift */; };
+		DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */; };
+		DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD954D50270D544400DD5A9B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
+		DD954D53270D555A00DD5A9B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9449D27084CD40095570C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB9449F27084CD40095570C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +31,9 @@
 		DDB944A627084CD50095570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB944A927084CD50095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB944AB27084CD50095570C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDCD5056270D6124004B0A9A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTextField.swift; sourceTree = "<group>"; };
+		DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +55,15 @@
 			path = Auth;
 			sourceTree = "<group>";
 		};
+		DD954D52270D553400DD5A9B /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				DD954D53270D555A00DD5A9B /* GoogleButton.swift */,
+				DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		DDB9449127084CD40095570C = {
 			isa = PBXGroup;
 			children = (
@@ -64,7 +83,7 @@
 		DDB9449C27084CD40095570C /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				DDB944B5270851820095570C /* Source */,
+				DDB944B5270851820095570C /* Sources */,
 				DDB944B1270851470095570C /* Resource */,
 				DDB944AB27084CD50095570C /* Info.plist */,
 			);
@@ -75,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				DDB944A627084CD50095570C /* Assets.xcassets */,
+				DD954D50270D544400DD5A9B /* Colors.xcassets */,
 				DDB944B2270851560095570C /* Storyboards */,
 			);
 			path = Resource;
@@ -89,13 +109,16 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		DDB944B5270851820095570C /* Source */ = {
+		DDB944B5270851820095570C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DDCD505C270D659D004B0A9A /* Utils */,
+				DDCD5055270D6110004B0A9A /* Extensions */,
+				DD954D52270D553400DD5A9B /* Components */,
 				DDB944B8270851CE0095570C /* Scenes */,
 				DDB944B62708519E0095570C /* Surpports */,
 			);
-			path = Source;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		DDB944B62708519E0095570C /* Surpports */ = {
@@ -113,6 +136,22 @@
 				DD954D49270D48B500DD5A9B /* Auth */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		DDCD5055270D6110004B0A9A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DDCD505C270D659D004B0A9A /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DDCD5056270D6124004B0A9A /* Color.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -173,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */,
+				DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */,
 				DDB944A727084CD50095570C /* Assets.xcassets in Resources */,
 				DDB944A527084CD40095570C /* Auth.storyboard in Resources */,
 			);
@@ -185,8 +225,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */,
 				DDB944A227084CD40095570C /* SignInViewController.swift in Sources */,
+				DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
+				DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */,
+				DDCD5057270D6124004B0A9A /* Color.swift in Sources */,
 				DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
