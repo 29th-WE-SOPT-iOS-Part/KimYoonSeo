@@ -9,8 +9,8 @@
 /* Begin PBXBuildFile section */
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
 		DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449F27084CD40095570C /* SceneDelegate.swift */; };
-		DDB944A227084CD40095570C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* ViewController.swift */; };
-		DDB944A527084CD40095570C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A327084CD40095570C /* Main.storyboard */; };
+		DDB944A227084CD40095570C /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* SignInViewController.swift */; };
+		DDB944A527084CD40095570C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A327084CD40095570C /* Auth.storyboard */; };
 		DDB944A727084CD50095570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A627084CD50095570C /* Assets.xcassets */; };
 		DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A827084CD50095570C /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
@@ -19,8 +19,8 @@
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9449D27084CD40095570C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB9449F27084CD40095570C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		DDB944A127084CD40095570C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		DDB944A427084CD40095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DDB944A127084CD40095570C /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		DDB944A427084CD40095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		DDB944A627084CD50095570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB944A927084CD50095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB944AB27084CD50095570C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -37,6 +37,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		DD954D49270D48B500DD5A9B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DDB944A127084CD40095570C /* SignInViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		DDB9449127084CD40095570C = {
 			isa = PBXGroup;
 			children = (
@@ -56,15 +64,55 @@
 		DDB9449C27084CD40095570C /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				DDB9449D27084CD40095570C /* AppDelegate.swift */,
-				DDB9449F27084CD40095570C /* SceneDelegate.swift */,
-				DDB944A127084CD40095570C /* ViewController.swift */,
-				DDB944A327084CD40095570C /* Main.storyboard */,
-				DDB944A627084CD50095570C /* Assets.xcassets */,
-				DDB944A827084CD50095570C /* LaunchScreen.storyboard */,
+				DDB944B5270851820095570C /* Source */,
+				DDB944B1270851470095570C /* Resource */,
 				DDB944AB27084CD50095570C /* Info.plist */,
 			);
 			path = "Youtube-Clone";
+			sourceTree = "<group>";
+		};
+		DDB944B1270851470095570C /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				DDB944A627084CD50095570C /* Assets.xcassets */,
+				DDB944B2270851560095570C /* Storyboards */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		DDB944B2270851560095570C /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				DDB944A327084CD40095570C /* Auth.storyboard */,
+				DDB944A827084CD50095570C /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		DDB944B5270851820095570C /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				DDB944B8270851CE0095570C /* Scenes */,
+				DDB944B62708519E0095570C /* Surpports */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		DDB944B62708519E0095570C /* Surpports */ = {
+			isa = PBXGroup;
+			children = (
+				DDB9449D27084CD40095570C /* AppDelegate.swift */,
+				DDB9449F27084CD40095570C /* SceneDelegate.swift */,
+			);
+			path = Surpports;
+			sourceTree = "<group>";
+		};
+		DDB944B8270851CE0095570C /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				DD954D49270D48B500DD5A9B /* Auth */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -126,7 +174,7 @@
 			files = (
 				DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */,
 				DDB944A727084CD50095570C /* Assets.xcassets in Resources */,
-				DDB944A527084CD40095570C /* Main.storyboard in Resources */,
+				DDB944A527084CD40095570C /* Auth.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,7 +185,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DDB944A227084CD40095570C /* ViewController.swift in Sources */,
+				DDB944A227084CD40095570C /* SignInViewController.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
 				DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */,
 			);
@@ -146,12 +194,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DDB944A327084CD40095570C /* Main.storyboard */ = {
+		DDB944A327084CD40095570C /* Auth.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				DDB944A427084CD40095570C /* Base */,
 			);
-			name = Main.storyboard;
+			name = Auth.storyboard;
 			sourceTree = "<group>";
 		};
 		DDB944A827084CD50095570C /* LaunchScreen.storyboard */ = {
