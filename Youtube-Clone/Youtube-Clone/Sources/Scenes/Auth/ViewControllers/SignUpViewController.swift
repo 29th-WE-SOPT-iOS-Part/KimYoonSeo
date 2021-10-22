@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class SignUpViewController: BaseViewController {
 // MARK: - Private Properties
     private let authBaseView = AuthBaseView(with: .signUp)
