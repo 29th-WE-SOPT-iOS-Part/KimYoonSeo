@@ -15,7 +15,6 @@
 		DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4B2721630A00ECE8AA /* Image.swift */; };
 		DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4D2721691800ECE8AA /* AuthBaseView.swift */; };
 		DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */; };
-		DD74BB532721713E00ECE8AA /* LayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB522721713E00ECE8AA /* LayoutProtocol.swift */; };
 		DD74BB55272171E200ECE8AA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB54272171E200ECE8AA /* UIView+Extension.swift */; };
 		DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */; };
 		DD8111DE27225B8D002D38A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8111DD27225B8D002D38A0 /* Main.storyboard */; };
@@ -41,7 +40,6 @@
 		DD74BB4B2721630A00ECE8AA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		DD74BB4D2721691800ECE8AA /* AuthBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBaseView.swift; sourceTree = "<group>"; };
 		DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
-		DD74BB522721713E00ECE8AA /* LayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProtocol.swift; sourceTree = "<group>"; };
 		DD74BB54272171E200ECE8AA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
 		DD8111DD27225B8D002D38A0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
@@ -81,14 +79,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD74BB512721712C00ECE8AA /* Protocol */ = {
-			isa = PBXGroup;
-			children = (
-				DD74BB522721713E00ECE8AA /* LayoutProtocol.swift */,
-			);
-			path = Protocol;
-			sourceTree = "<group>";
-		};
 		DD8111DF27229FC5002D38A0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -173,7 +163,6 @@
 		DDB944B5270851820095570C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				DD74BB512721712C00ECE8AA /* Protocol */,
 				DDCD505F270D6D33004B0A9A /* Consts */,
 				DDCD505C270D659D004B0A9A /* Utils */,
 				DDCD5055270D6110004B0A9A /* Extensions */,
@@ -322,7 +311,6 @@
 				DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */,
 				DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */,
 				DDCD5065270D6DA2004B0A9A /* ViewController.swift in Sources */,
-				DD74BB532721713E00ECE8AA /* LayoutProtocol.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
 				DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */,
 				DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */,
