@@ -25,6 +25,8 @@ class WelcomeViewController: BaseViewController {
 // MARK: - Private Properties
     private let welcomeLabel = UILabel().then {
         $0.font = .systemFont(ofSize: 26, weight: .semibold)
+        $0.numberOfLines = 0
+        $0.textAlignment = .center
     }
     
     private let nextButton = GoogleButton(type: .filled).then {
