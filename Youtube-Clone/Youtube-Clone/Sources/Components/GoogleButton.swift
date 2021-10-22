@@ -29,15 +29,14 @@ class GoogleButton: UIButton {
     
     private var type: GoogleButtonType?
     
-    init(type: GoogleButtonType = .filled){
-        super.init(frame: CGRect.zero)
+    convenience init(type: GoogleButtonType = .filled) {
+        self.init(frame: CGRect.zero)
         self.type = type
         makeButton()
     }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        makeButton()
     }
     
     required init?(coder aDecoder: NSCoder) {
