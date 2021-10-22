@@ -17,7 +17,6 @@
 		DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */; };
 		DD74BB55272171E200ECE8AA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB54272171E200ECE8AA /* UIView+Extension.swift */; };
 		DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */; };
-		DD8111DE27225B8D002D38A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8111DD27225B8D002D38A0 /* Main.storyboard */; };
 		DD8111E32722A1D2002D38A0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111E22722A1D2002D38A0 /* TabBarController.swift */; };
 		DD8111E52722A219002D38A0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111E42722A219002D38A0 /* HomeViewController.swift */; };
 		DD8111E72722A228002D38A0 /* ShortsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111E62722A228002D38A0 /* ShortsViewController.swift */; };
@@ -28,7 +27,6 @@
 		DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD954D50270D544400DD5A9B /* Colors.xcassets */; };
 		DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954D53270D555A00DD5A9B /* GoogleButton.swift */; };
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
-		DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449F27084CD40095570C /* SceneDelegate.swift */; };
 		DDB944A227084CD40095570C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* LoginViewController.swift */; };
 		DDB944A727084CD50095570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A627084CD50095570C /* Assets.xcassets */; };
 		DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A827084CD50095570C /* LaunchScreen.storyboard */; };
@@ -49,7 +47,6 @@
 		DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		DD74BB54272171E200ECE8AA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
-		DD8111DD27225B8D002D38A0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD8111E22722A1D2002D38A0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		DD8111E42722A219002D38A0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DD8111E62722A228002D38A0 /* ShortsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShortsViewController.swift; sourceTree = "<group>"; };
@@ -61,7 +58,6 @@
 		DD954D53270D555A00DD5A9B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9449D27084CD40095570C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		DDB9449F27084CD40095570C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DDB944A127084CD40095570C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		DDB944A627084CD50095570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB944A927084CD50095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -185,7 +181,6 @@
 			isa = PBXGroup;
 			children = (
 				DDB944A827084CD50095570C /* LaunchScreen.storyboard */,
-				DD8111DD27225B8D002D38A0 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -208,7 +203,6 @@
 			isa = PBXGroup;
 			children = (
 				DDB9449D27084CD40095570C /* AppDelegate.swift */,
-				DDB9449F27084CD40095570C /* SceneDelegate.swift */,
 			);
 			path = Surpports;
 			sourceTree = "<group>";
@@ -330,7 +324,6 @@
 				DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */,
 				DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */,
 				DDB944A727084CD50095570C /* Assets.xcassets in Resources */,
-				DD8111DE27225B8D002D38A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,7 +358,6 @@
 				DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */,
 				DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */,
 				DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */,
-				DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
