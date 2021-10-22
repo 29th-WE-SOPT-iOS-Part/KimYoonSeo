@@ -7,15 +7,6 @@
 
 import UIKit
 
-/// tabBarItem
-enum TabBarItem: String {
-    case home = "홈"
-    case shorts = "Shorts"
-    case addition = "추가"
-    case subscription = "구독"
-    case library = "보관함"
-}
-
 class TabBarController: UITabBarController {
     
 // MARK: - View Life Cycle
@@ -39,33 +30,14 @@ class TabBarController: UITabBarController {
 // MARK: - set TabBar
 extension TabBarController {
     private func setTabBarItems() {
-        let homeVC = HomeViewController()
-        let shortsVC = ShortsViewController()
-        let additionVC = AdditionViewController()
-        let subscriptionVC = SubscriptionViewController()
-        let libraryVC = LibraryViewController()
+        let viewControllers = [HomeViewController(), ShortsViewController(), AdditionViewController(), SubscriptionViewController(), LibraryViewController()]
+        setViewControllers(viewControllers, animated: true)
         
-        homeVC.tabBarItem.title = TabBarItem.home.rawValue
-        homeVC.tabBarItem.image = Const.Image.home_line
-        homeVC.tabBarItem.selectedImage = Const.Image.home_filled
-        
-        shortsVC.tabBarItem.title = TabBarItem.shorts.rawValue
-        shortsVC.tabBarItem.image = Const.Image.shorts_line
-        shortsVC.tabBarItem.selectedImage = Const.Image.shorts_filled
-        
-        additionVC.tabBarItem.title = TabBarItem.addition.rawValue
-        additionVC.tabBarItem.image = Const.Image.plus_circle_line
-        additionVC.tabBarItem.selectedImage = Const.Image.plus_circle_line
-        
-        subscriptionVC.tabBarItem.title = TabBarItem.subscription.rawValue
-        subscriptionVC.tabBarItem.image = Const.Image.subscription_line
-        subscriptionVC.tabBarItem.selectedImage = Const.Image.subscription_filled
-        
-        libraryVC.tabBarItem.title = TabBarItem.library.rawValue
-        libraryVC.tabBarItem.image = Const.Image.library_line
-        libraryVC.tabBarItem.selectedImage = Const.Image.library_filled
-        
-        setViewControllers([homeVC, shortsVC, additionVC, subscriptionVC, libraryVC], animated: true)
+        for (index, item) in viewControllers.enumerated() {
+            item.tabBarItem.title = TabBarItem(rawValue: index)?.getTitle()
+            item.tabBarItem.image = TabBarItem(rawValue: index)?.getImage()
+            item.tabBarItem.selectedImage = TabBarItem(rawValue: index)?.getSelectedImage()
+        }
     }
     
     private func setTabBarUI() {
