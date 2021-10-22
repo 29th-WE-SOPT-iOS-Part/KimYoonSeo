@@ -24,6 +24,7 @@
 		DD8111E92722A27D002D38A0 /* AdditionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111E82722A27D002D38A0 /* AdditionViewController.swift */; };
 		DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EA2722A2D9002D38A0 /* SubscriptionViewController.swift */; };
 		DD8111ED2722A302002D38A0 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EC2722A302002D38A0 /* LibraryViewController.swift */; };
+		DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */; };
 		DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD954D50270D544400DD5A9B /* Colors.xcassets */; };
 		DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954D53270D555A00DD5A9B /* GoogleButton.swift */; };
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
@@ -55,6 +56,7 @@
 		DD8111E82722A27D002D38A0 /* AdditionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionViewController.swift; sourceTree = "<group>"; };
 		DD8111EA2722A2D9002D38A0 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		DD8111EC2722A302002D38A0 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		DD954D50270D544400DD5A9B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		DD954D53270D555A00DD5A9B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -115,6 +117,14 @@
 				DD8111E22722A1D2002D38A0 /* TabBarController.swift */,
 			);
 			path = TabbarController;
+			sourceTree = "<group>";
+		};
+		DD8111EE2722B8DB002D38A0 /* AppModels */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */,
+			);
+			path = AppModels;
 			sourceTree = "<group>";
 		};
 		DD954D49270D48B500DD5A9B /* Auth */ = {
@@ -183,6 +193,7 @@
 		DDB944B5270851820095570C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DD8111EE2722B8DB002D38A0 /* AppModels */,
 				DDCD505F270D6D33004B0A9A /* Consts */,
 				DDCD505C270D659D004B0A9A /* Utils */,
 				DDCD5055270D6110004B0A9A /* Extensions */,
@@ -337,6 +348,7 @@
 				DDCD505E270D6ABC004B0A9A /* SignUpViewController.swift in Sources */,
 				DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */,
 				DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */,
+				DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */,
 				DD8111E72722A228002D38A0 /* ShortsViewController.swift in Sources */,
 				DDCD5065270D6DA2004B0A9A /* ViewController.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,

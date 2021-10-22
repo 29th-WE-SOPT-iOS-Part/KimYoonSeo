@@ -17,7 +17,7 @@ extension Const {
         static let plus_circle_line = UIImage(named: "plueCircleIcon")!
         static let shorts_line = UIImage(named: "shortsIcon")!
         static let shorts_filled = UIImage(named: "shortsIconFill")!
-        static let subscription_line = UIImage(named: "subscriptionsIcon")
-        static let subscription_filled = UIImage(named: "subscriptionsIconFill")
+        static let subscription_line = UIImage(named: "subscriptionsIcon")!
+        static let subscription_filled = UIImage(named: "subscriptionsIconFill")!
     }
 }
