@@ -6,8 +6,8 @@
 //
 
 import UIKit
-import RxSwift
 
+/// tabBarItem
 enum TabBarItem: String {
     case home = "홈"
     case shorts = "Shorts"
@@ -18,6 +18,7 @@ enum TabBarItem: String {
 
 class TabBarController: UITabBarController {
     
+// MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setTabBarItems()
@@ -35,6 +36,7 @@ class TabBarController: UITabBarController {
    }
 }
 
+// MARK: - set TabBar
 extension TabBarController {
     private func setTabBarItems() {
         let homeVC = HomeViewController()
