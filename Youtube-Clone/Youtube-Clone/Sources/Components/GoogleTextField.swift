@@ -24,7 +24,6 @@ class GoogleTextField: UITextField {
     
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        makeTextField()
     }
 
 // MARK: - make TextField

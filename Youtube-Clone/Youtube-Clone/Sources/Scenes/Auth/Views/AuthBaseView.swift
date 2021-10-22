@@ -109,24 +109,33 @@ class AuthBaseView: UIView {
     
 
 // MARK: - View Life Cycle
-    init(with type: AuthViewType) {
-        super.init(frame: CGRect.zero)
-        self.viewType = type
-        setLayouts()
-    }
-    
     override init(frame: CGRect) {
-        super.init(frame: CGRect.zero)
-        
+        super.init(frame: frame)
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
 
+    
+    convenience init(with type: AuthViewType) {
+        self.init(frame: .zero)
+        self.viewType = type
+        setLayouts()
+    }
+    
+   
 // MARK: - Public Functions
     public func isEnabled() -> Bool{
         return !(!nameTextField.hasText || !emailTextField.hasText || !passwordTextField.hasText)
+    }
+    
+    public func removeTextFieldText() {
+        [nameTextField, emailTextField, passwordTextField].forEach {
+            $0.text?.removeAll()
+        }
+        
+        nextButton.isEnabled = false
     }
 }
 

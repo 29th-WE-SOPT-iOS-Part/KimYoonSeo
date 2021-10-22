@@ -22,7 +22,11 @@ class LoginViewController: BaseViewController {
         setTargets()
         setLayouts()
     }
-
+    
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        authBaseView.removeTextFieldText()
+    }
 
 // MARK: - Functions
     private func setTargets() {

@@ -59,12 +59,17 @@ extension WelcomeViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case nextButton:
-            break
+            
+            UIApplication.shared.windows.first?.rootViewController = TabBarController()
+            UIApplication.shared.windows.first?.makeKeyAndVisible()
+            dismiss(animated: true, completion: nil)
+            
         case accountButton:
             guard let presentingViewController = presentingViewController as? UINavigationController else { return }
-            self.dismiss(animated: true) {
+            dismiss(animated: true) {
                 presentingViewController.popToRootViewController(animated: true)
             }
+            
         default:
             break
         }

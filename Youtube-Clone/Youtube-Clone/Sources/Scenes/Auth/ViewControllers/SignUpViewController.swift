@@ -20,6 +20,11 @@ class SignUpViewController: BaseViewController {
         setTargets()
     }
     
+    override func viewDidDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        authBaseView.removeTextFieldText()
+    }
+    
 // MARK: - Private Functions
     private func hideNavigationBar() {
         navigationController?.navigationBar.isHidden = true
@@ -55,6 +60,7 @@ extension SignUpViewController {
             vc.name = authBaseView.nameTextField.text
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
+            
         case authBaseView.maskingButton:
             authBaseView.passwordTextField.isSecureTextEntry.toggle()
             authBaseView.maskingButton.isSelected.toggle()
