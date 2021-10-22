@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class WelcomeViewController: BaseViewController {
 // MARK: - Public Properties
     public var name: String? {
