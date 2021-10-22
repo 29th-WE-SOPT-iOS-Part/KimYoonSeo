@@ -3,16 +3,27 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		DD74BB402721610B00ECE8AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB3F2721610B00ECE8AA /* SnapKit */; };
+		DD74BB432721612100ECE8AA /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB422721612100ECE8AA /* Then */; };
+		DD74BB462721613700ECE8AA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB452721613700ECE8AA /* RxCocoa */; };
+		DD74BB482721613700ECE8AA /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB472721613700ECE8AA /* RxRelay */; };
+		DD74BB4A2721613700ECE8AA /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB492721613700ECE8AA /* RxSwift */; };
+		DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4B2721630A00ECE8AA /* Image.swift */; };
+		DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4D2721691800ECE8AA /* AuthBaseView.swift */; };
+		DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */; };
+		DD74BB532721713E00ECE8AA /* LayoutProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB522721713E00ECE8AA /* LayoutProtocol.swift */; };
+		DD74BB55272171E200ECE8AA /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB54272171E200ECE8AA /* UIView+Extension.swift */; };
+		DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */; };
+		DD8111DE27225B8D002D38A0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DD8111DD27225B8D002D38A0 /* Main.storyboard */; };
 		DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD954D50270D544400DD5A9B /* Colors.xcassets */; };
 		DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954D53270D555A00DD5A9B /* GoogleButton.swift */; };
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
 		DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449F27084CD40095570C /* SceneDelegate.swift */; };
 		DDB944A227084CD40095570C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* LoginViewController.swift */; };
-		DDB944A527084CD40095570C /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A327084CD40095570C /* Auth.storyboard */; };
 		DDB944A727084CD50095570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A627084CD50095570C /* Assets.xcassets */; };
 		DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A827084CD50095570C /* LaunchScreen.storyboard */; };
 		DDCD5057270D6124004B0A9A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5056270D6124004B0A9A /* Color.swift */; };
@@ -27,13 +38,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		DD74BB4B2721630A00ECE8AA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		DD74BB4D2721691800ECE8AA /* AuthBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBaseView.swift; sourceTree = "<group>"; };
+		DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		DD74BB522721713E00ECE8AA /* LayoutProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LayoutProtocol.swift; sourceTree = "<group>"; };
+		DD74BB54272171E200ECE8AA /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+Extension.swift"; sourceTree = "<group>"; };
+		DD8111DD27225B8D002D38A0 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		DD954D50270D544400DD5A9B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		DD954D53270D555A00DD5A9B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DDB9449D27084CD40095570C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DDB9449F27084CD40095570C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		DDB944A127084CD40095570C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		DDB944A427084CD40095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		DDB944A627084CD50095570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB944A927084CD50095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB944AB27084CD50095570C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -53,18 +70,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD74BB462721613700ECE8AA /* RxCocoa in Frameworks */,
+				DD74BB402721610B00ECE8AA /* SnapKit in Frameworks */,
+				DD74BB4A2721613700ECE8AA /* RxSwift in Frameworks */,
+				DD74BB482721613700ECE8AA /* RxRelay in Frameworks */,
+				DD74BB432721612100ECE8AA /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		DD954D49270D48B500DD5A9B /* Auth */ = {
+		DD74BB512721712C00ECE8AA /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DD74BB522721713E00ECE8AA /* LayoutProtocol.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DD8111DF27229FC5002D38A0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD74BB4D2721691800ECE8AA /* AuthBaseView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD8111E027229FCF002D38A0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				DDB944A127084CD40095570C /* LoginViewController.swift */,
 				DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */,
 				DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		DD954D49270D48B500DD5A9B /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111E027229FCF002D38A0 /* ViewControllers */,
+				DD8111DF27229FC5002D38A0 /* Views */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -117,8 +164,8 @@
 		DDB944B2270851560095570C /* Storyboards */ = {
 			isa = PBXGroup;
 			children = (
-				DDB944A327084CD40095570C /* Auth.storyboard */,
 				DDB944A827084CD50095570C /* LaunchScreen.storyboard */,
+				DD8111DD27225B8D002D38A0 /* Main.storyboard */,
 			);
 			path = Storyboards;
 			sourceTree = "<group>";
@@ -126,6 +173,7 @@
 		DDB944B5270851820095570C /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				DD74BB512721712C00ECE8AA /* Protocol */,
 				DDCD505F270D6D33004B0A9A /* Consts */,
 				DDCD505C270D659D004B0A9A /* Utils */,
 				DDCD5055270D6110004B0A9A /* Extensions */,
@@ -148,6 +196,7 @@
 		DDB944B8270851CE0095570C /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */,
 				DD954D49270D48B500DD5A9B /* Auth */,
 			);
 			path = Scenes;
@@ -158,6 +207,8 @@
 			children = (
 				DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */,
 				DDCD5068270D76C7004B0A9A /* UIButton+Extension.swift */,
+				DD74BB54272171E200ECE8AA /* UIView+Extension.swift */,
+				DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -176,6 +227,7 @@
 				DDCD5060270D6D4E004B0A9A /* Const.swift */,
 				DDCD5062270D6D92004B0A9A /* Storyboard.swift */,
 				DDCD5064270D6DA2004B0A9A /* ViewController.swift */,
+				DD74BB4B2721630A00ECE8AA /* Image.swift */,
 			);
 			path = Consts;
 			sourceTree = "<group>";
@@ -196,6 +248,13 @@
 			dependencies = (
 			);
 			name = "Youtube-Clone";
+			packageProductDependencies = (
+				DD74BB3F2721610B00ECE8AA /* SnapKit */,
+				DD74BB422721612100ECE8AA /* Then */,
+				DD74BB452721613700ECE8AA /* RxCocoa */,
+				DD74BB472721613700ECE8AA /* RxRelay */,
+				DD74BB492721613700ECE8AA /* RxSwift */,
+			);
 			productName = "Youtube-Clone";
 			productReference = DDB9449A27084CD40095570C /* Youtube-Clone.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +282,11 @@
 				Base,
 			);
 			mainGroup = DDB9449127084CD40095570C;
+			packageReferences = (
+				DD74BB3E2721610B00ECE8AA /* XCRemoteSwiftPackageReference "SnapKit" */,
+				DD74BB412721612000ECE8AA /* XCRemoteSwiftPackageReference "Then" */,
+				DD74BB442721613700ECE8AA /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = DDB9449B27084CD40095570C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,7 +304,7 @@
 				DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */,
 				DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */,
 				DDB944A727084CD50095570C /* Assets.xcassets in Resources */,
-				DDB944A527084CD40095570C /* Auth.storyboard in Resources */,
+				DD8111DE27225B8D002D38A0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,13 +319,19 @@
 				DDB944A227084CD40095570C /* LoginViewController.swift in Sources */,
 				DDCD5069270D76C7004B0A9A /* UIButton+Extension.swift in Sources */,
 				DDCD505E270D6ABC004B0A9A /* SignUpViewController.swift in Sources */,
+				DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */,
 				DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */,
 				DDCD5065270D6DA2004B0A9A /* ViewController.swift in Sources */,
+				DD74BB532721713E00ECE8AA /* LayoutProtocol.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
+				DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */,
+				DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */,
 				DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */,
 				DDCD5063270D6D92004B0A9A /* Storyboard.swift in Sources */,
+				DD74BB55272171E200ECE8AA /* UIView+Extension.swift in Sources */,
 				DDCD5057270D6124004B0A9A /* Color.swift in Sources */,
 				DDCD5067270D6FB4004B0A9A /* WelcomeViewController.swift in Sources */,
+				DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */,
 				DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */,
 				DDB944A027084CD40095570C /* SceneDelegate.swift in Sources */,
 			);
@@ -270,14 +340,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		DDB944A327084CD40095570C /* Auth.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				DDB944A427084CD40095570C /* Base */,
-			);
-			name = Auth.storyboard;
-			sourceTree = "<group>";
-		};
 		DDB944A827084CD50095570C /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -463,6 +525,61 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		DD74BB3E2721610B00ECE8AA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+		DD74BB412721612000ECE8AA /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		DD74BB442721613700ECE8AA /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		DD74BB3F2721610B00ECE8AA /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD74BB3E2721610B00ECE8AA /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		DD74BB422721612100ECE8AA /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD74BB412721612000ECE8AA /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+		DD74BB452721613700ECE8AA /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD74BB442721613700ECE8AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		DD74BB472721613700ECE8AA /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD74BB442721613700ECE8AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		DD74BB492721613700ECE8AA /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD74BB442721613700ECE8AA /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = DDB9449227084CD40095570C /* Project object */;
 }
