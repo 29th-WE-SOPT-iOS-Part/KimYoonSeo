@@ -8,6 +8,15 @@
 import UIKit
 
 class GoogleTextField: UITextField {
+    
+// MARK: - Public Properties
+    public var placeholderText: String? {
+        didSet {
+            attributedPlaceholder = NSAttributedString(string: placeholderText ?? "", attributes: [.foregroundColor : UIColor.Gray, .font: UIFont.systemFont(ofSize: 15, weight: .regular)])
+        }
+    }
+    
+// MARK: - init
     override init(frame: CGRect) {
         super.init(frame: frame)
         makeTextField()
@@ -17,14 +26,15 @@ class GoogleTextField: UITextField {
         super.init(coder: aDecoder)
         makeTextField()
     }
-    
+
+// MARK: - make TextField
     private func makeTextField() {
         clipsToBounds = true
         borderStyle = .none
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.lightGray.cgColor
+        layer.borderColor = UIColor.LightGray.cgColor
         layer.borderWidth = 1
-        font = .systemFont(ofSize: 18)
+        font = .systemFont(ofSize: 15)
         addLeftPadding(with: 10)
     }
 }
