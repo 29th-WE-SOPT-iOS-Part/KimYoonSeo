@@ -64,11 +64,13 @@ extension WelcomeViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case nextButton:
-            
-            UIApplication.shared.windows.first?.rootViewController = TabBarController()
-            UIApplication.shared.windows.first?.makeKeyAndVisible()
-            dismiss(animated: true, completion: nil)
-            
+            UIView.transition(with: self.view, duration: 1, options: .showHideTransitionViews) { [weak self] in
+                self?.dismiss(animated: true, completion: nil)
+            } completion: { _ in 
+                UIApplication.shared.windows.first?.rootViewController = TabBarController()
+                UIApplication.shared.windows.first?.makeKeyAndVisible()
+            }
+
         case accountButton:
             guard let presentingViewController = presentingViewController as? UINavigationController else { return }
             dismiss(animated: true) {
