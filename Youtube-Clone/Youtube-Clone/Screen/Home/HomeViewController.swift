@@ -7,23 +7,57 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class HomeViewController: BaseViewController {
+    
+    private let tableView = UITableView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setLayouts()
+        setDelegation()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    private func setDelegation() {
+        tableView.delegate = self
+        tableView.dataSource = self
     }
-    */
+    
+}
 
+extension HomeViewController: UITableViewDelegate {
+    
+}
+
+extension HomeViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 100
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
+    }
+    
+    
+}
+
+
+// MARK: - Layout
+extension HomeViewController {
+    private func setLayouts() {
+        setViewHiearachy()
+        setConstraints()
+    }
+    
+    private func setViewHiearachy() {
+        view.addSubviews(tableView)
+    }
+    
+    private func setConstraints() {
+        tableView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
 }

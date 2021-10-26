@@ -66,8 +66,8 @@ extension WelcomeViewController {
         case nextButton:
             UIView.transition(with: self.view, duration: 1, options: .showHideTransitionViews) { [weak self] in
                 self?.dismiss(animated: true, completion: nil)
-            } completion: { _ in 
-                UIApplication.shared.windows.first?.rootViewController = TabBarController()
+            } completion: { _ in
+                UIApplication.shared.windows.first?.rootViewController = BaseNavigationController(rootViewController: TabBarController())
                 UIApplication.shared.windows.first?.makeKeyAndVisible()
             }
 
