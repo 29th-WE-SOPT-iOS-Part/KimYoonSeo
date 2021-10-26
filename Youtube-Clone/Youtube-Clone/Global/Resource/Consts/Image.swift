@@ -9,6 +9,7 @@ import UIKit
 
 extension Const {
     enum Image {
+        /// TabBar Icon
         static let logo = UIImage(named: "logo")!
         static let library_line = UIImage(named: "LibraryIcon")!
         static let library_filled = UIImage(named: "LibraryIconFill")!

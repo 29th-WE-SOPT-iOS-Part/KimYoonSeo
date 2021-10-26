@@ -30,15 +30,16 @@
 		DDB944A227084CD40095570C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* LoginViewController.swift */; };
 		DDB944A727084CD50095570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A627084CD50095570C /* Assets.xcassets */; };
 		DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A827084CD50095570C /* LaunchScreen.storyboard */; };
-		DDCD5057270D6124004B0A9A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5056270D6124004B0A9A /* Color.swift */; };
 		DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */; };
 		DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */; };
 		DDCD505E270D6ABC004B0A9A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */; };
 		DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5060270D6D4E004B0A9A /* Const.swift */; };
-		DDCD5063270D6D92004B0A9A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5062270D6D92004B0A9A /* Storyboard.swift */; };
-		DDCD5065270D6DA2004B0A9A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5064270D6DA2004B0A9A /* ViewController.swift */; };
 		DDCD5067270D6FB4004B0A9A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */; };
 		DDCD5069270D76C7004B0A9A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5068270D76C7004B0A9A /* UIButton+Extension.swift */; };
+		DDEC872B2728700A00C5C993 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */; };
+		DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */; };
+		DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872F272870FE00C5C993 /* Reusable.swift */; };
+		DDEC8732272871D200C5C993 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC8731272871D200C5C993 /* Color.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,15 +63,16 @@
 		DDB944A627084CD50095570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB944A927084CD50095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB944AB27084CD50095570C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DDCD5056270D6124004B0A9A /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTextField.swift; sourceTree = "<group>"; };
 		DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DDCD5060270D6D4E004B0A9A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		DDCD5062270D6D92004B0A9A /* Storyboard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
-		DDCD5064270D6DA2004B0A9A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
 		DDCD5068270D76C7004B0A9A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
+		DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
+		DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
+		DDEC872F272870FE00C5C993 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
+		DDEC8731272871D200C5C993 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,14 +107,6 @@
 				DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */,
 			);
 			path = ViewControllers;
-			sourceTree = "<group>";
-		};
-		DD8111E12722A1AD002D38A0 /* TabbarController */ = {
-			isa = PBXGroup;
-			children = (
-				DD8111E22722A1D2002D38A0 /* TabBarController.swift */,
-			);
-			path = TabbarController;
 			sourceTree = "<group>";
 		};
 		DD8111EE2722B8DB002D38A0 /* AppModels */ = {
@@ -160,9 +154,8 @@
 		DDB9449C27084CD40095570C /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
-				DDB944B5270851820095570C /* Sources */,
-				DDB944B1270851470095570C /* Resource */,
-				DDB944AB27084CD50095570C /* Info.plist */,
+				DDEC87332728730500C5C993 /* Global */,
+				DDB944B5270851820095570C /* Screen */,
 			);
 			path = "Youtube-Clone";
 			sourceTree = "<group>";
@@ -172,6 +165,7 @@
 			children = (
 				DDB944A627084CD50095570C /* Assets.xcassets */,
 				DD954D50270D544400DD5A9B /* Colors.xcassets */,
+				DDCD505F270D6D33004B0A9A /* Consts */,
 				DDB944B2270851560095570C /* Storyboards */,
 			);
 			path = Resource;
@@ -185,71 +179,120 @@
 			path = Storyboards;
 			sourceTree = "<group>";
 		};
-		DDB944B5270851820095570C /* Sources */ = {
+		DDB944B5270851820095570C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
-				DD8111EE2722B8DB002D38A0 /* AppModels */,
-				DDCD505F270D6D33004B0A9A /* Consts */,
-				DDCD505C270D659D004B0A9A /* Utils */,
-				DDCD5055270D6110004B0A9A /* Extensions */,
 				DD954D52270D553400DD5A9B /* Components */,
-				DDB944B8270851CE0095570C /* Scenes */,
-				DDB944B62708519E0095570C /* Surpports */,
+				DDEC8734272873A200C5C993 /* Base */,
+				DD954D49270D48B500DD5A9B /* Auth */,
+				DDEC8739272873EF00C5C993 /* Library */,
+				DDEC8738272873E600C5C993 /* Subscription */,
+				DDEC8737272873D900C5C993 /* Addition */,
+				DDEC8736272873D300C5C993 /* Shorts */,
+				DDEC8735272873CC00C5C993 /* Home */,
+				DD8111EE2722B8DB002D38A0 /* AppModels */,
 			);
-			path = Sources;
+			path = Screen;
 			sourceTree = "<group>";
 		};
-		DDB944B62708519E0095570C /* Surpports */ = {
+		DDB944B62708519E0095570C /* Surpport */ = {
 			isa = PBXGroup;
 			children = (
+				DDB944AB27084CD50095570C /* Info.plist */,
 				DDB9449D27084CD40095570C /* AppDelegate.swift */,
 			);
-			path = Surpports;
+			path = Surpport;
 			sourceTree = "<group>";
 		};
-		DDB944B8270851CE0095570C /* Scenes */ = {
-			isa = PBXGroup;
-			children = (
-				DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */,
-				DD8111E12722A1AD002D38A0 /* TabbarController */,
-				DD954D49270D48B500DD5A9B /* Auth */,
-				DD8111E42722A219002D38A0 /* HomeViewController.swift */,
-				DD8111E62722A228002D38A0 /* ShortsViewController.swift */,
-				DD8111E82722A27D002D38A0 /* AdditionViewController.swift */,
-				DD8111EA2722A2D9002D38A0 /* SubscriptionViewController.swift */,
-				DD8111EC2722A302002D38A0 /* LibraryViewController.swift */,
-			);
-			path = Scenes;
-			sourceTree = "<group>";
-		};
-		DDCD5055270D6110004B0A9A /* Extensions */ = {
+		DDCD5055270D6110004B0A9A /* Extension */ = {
 			isa = PBXGroup;
 			children = (
 				DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */,
 				DDCD5068270D76C7004B0A9A /* UIButton+Extension.swift */,
 				DD74BB54272171E200ECE8AA /* UIView+Extension.swift */,
 				DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */,
+				DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */,
+				DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */,
 			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		DDCD505C270D659D004B0A9A /* Utils */ = {
-			isa = PBXGroup;
-			children = (
-				DDCD5056270D6124004B0A9A /* Color.swift */,
-			);
-			path = Utils;
+			path = Extension;
 			sourceTree = "<group>";
 		};
 		DDCD505F270D6D33004B0A9A /* Consts */ = {
 			isa = PBXGroup;
 			children = (
 				DDCD5060270D6D4E004B0A9A /* Const.swift */,
-				DDCD5062270D6D92004B0A9A /* Storyboard.swift */,
-				DDCD5064270D6DA2004B0A9A /* ViewController.swift */,
 				DD74BB4B2721630A00ECE8AA /* Image.swift */,
+				DDEC8731272871D200C5C993 /* Color.swift */,
 			);
 			path = Consts;
+			sourceTree = "<group>";
+		};
+		DDEC872E272870EE00C5C993 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				DDEC872F272870FE00C5C993 /* Reusable.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		DDEC87332728730500C5C993 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				DDB944B62708519E0095570C /* Surpport */,
+				DDEC872E272870EE00C5C993 /* Protocol */,
+				DDCD5055270D6110004B0A9A /* Extension */,
+				DDB944B1270851470095570C /* Resource */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		DDEC8734272873A200C5C993 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */,
+				DD8111E22722A1D2002D38A0 /* TabBarController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		DDEC8735272873CC00C5C993 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111E42722A219002D38A0 /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		DDEC8736272873D300C5C993 /* Shorts */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111E62722A228002D38A0 /* ShortsViewController.swift */,
+			);
+			path = Shorts;
+			sourceTree = "<group>";
+		};
+		DDEC8737272873D900C5C993 /* Addition */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111E82722A27D002D38A0 /* AdditionViewController.swift */,
+			);
+			path = Addition;
+			sourceTree = "<group>";
+		};
+		DDEC8738272873E600C5C993 /* Subscription */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111EA2722A2D9002D38A0 /* SubscriptionViewController.swift */,
+			);
+			path = Subscription;
+			sourceTree = "<group>";
+		};
+		DDEC8739272873EF00C5C993 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DD8111EC2722A302002D38A0 /* LibraryViewController.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -339,20 +382,21 @@
 				DDB944A227084CD40095570C /* LoginViewController.swift in Sources */,
 				DDCD5069270D76C7004B0A9A /* UIButton+Extension.swift in Sources */,
 				DDCD505E270D6ABC004B0A9A /* SignUpViewController.swift in Sources */,
+				DDEC872B2728700A00C5C993 /* UITableView+Reusable.swift in Sources */,
 				DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */,
 				DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */,
 				DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */,
 				DD8111E72722A228002D38A0 /* ShortsViewController.swift in Sources */,
-				DDCD5065270D6DA2004B0A9A /* ViewController.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
+				DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */,
 				DD8111ED2722A302002D38A0 /* LibraryViewController.swift in Sources */,
+				DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */,
 				DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */,
 				DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */,
 				DD8111E32722A1D2002D38A0 /* TabBarController.swift in Sources */,
+				DDEC8732272871D200C5C993 /* Color.swift in Sources */,
 				DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */,
-				DDCD5063270D6D92004B0A9A /* Storyboard.swift in Sources */,
 				DD74BB55272171E200ECE8AA /* UIView+Extension.swift in Sources */,
-				DDCD5057270D6124004B0A9A /* Color.swift in Sources */,
 				DD8111E52722A219002D38A0 /* HomeViewController.swift in Sources */,
 				DDCD5067270D6FB4004B0A9A /* WelcomeViewController.swift in Sources */,
 				DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */,
@@ -497,7 +541,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Youtube-Clone/Info.plist";
+				INFOPLIST_FILE = "Youtube-Clone/Global/Surpport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -515,7 +559,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "Youtube-Clone/Info.plist";
+				INFOPLIST_FILE = "Youtube-Clone/Global/Surpport/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
