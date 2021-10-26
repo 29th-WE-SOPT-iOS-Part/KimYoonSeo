@@ -40,6 +40,7 @@
 		DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */; };
 		DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872F272870FE00C5C993 /* Reusable.swift */; };
 		DDEC8732272871D200C5C993 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC8731272871D200C5C993 /* Color.swift */; };
+		DDEC873B27287ABA00C5C993 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC873A27287ABA00C5C993 /* BaseNavigationController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -73,6 +74,7 @@
 		DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
 		DDEC872F272870FE00C5C993 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DDEC8731272871D200C5C993 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		DDEC873A27287ABA00C5C993 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,12 +111,12 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
-		DD8111EE2722B8DB002D38A0 /* AppModels */ = {
+		DD8111EE2722B8DB002D38A0 /* AppModel */ = {
 			isa = PBXGroup;
 			children = (
 				DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */,
 			);
-			path = AppModels;
+			path = AppModel;
 			sourceTree = "<group>";
 		};
 		DD954D49270D48B500DD5A9B /* Auth */ = {
@@ -165,7 +167,6 @@
 			children = (
 				DDB944A627084CD50095570C /* Assets.xcassets */,
 				DD954D50270D544400DD5A9B /* Colors.xcassets */,
-				DDCD505F270D6D33004B0A9A /* Consts */,
 				DDB944B2270851560095570C /* Storyboards */,
 			);
 			path = Resource;
@@ -185,12 +186,11 @@
 				DD954D52270D553400DD5A9B /* Components */,
 				DDEC8734272873A200C5C993 /* Base */,
 				DD954D49270D48B500DD5A9B /* Auth */,
-				DDEC8739272873EF00C5C993 /* Library */,
-				DDEC8738272873E600C5C993 /* Subscription */,
-				DDEC8737272873D900C5C993 /* Addition */,
-				DDEC8736272873D300C5C993 /* Shorts */,
 				DDEC8735272873CC00C5C993 /* Home */,
-				DD8111EE2722B8DB002D38A0 /* AppModels */,
+				DDEC8736272873D300C5C993 /* Shorts */,
+				DDEC8737272873D900C5C993 /* Addition */,
+				DDEC8738272873E600C5C993 /* Subscription */,
+				DDEC8739272873EF00C5C993 /* Library */,
 			);
 			path = Screen;
 			sourceTree = "<group>";
@@ -238,9 +238,11 @@
 		DDEC87332728730500C5C993 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				DD8111EE2722B8DB002D38A0 /* AppModel */,
+				DDCD505F270D6D33004B0A9A /* Consts */,
+				DDCD5055270D6110004B0A9A /* Extension */,
 				DDB944B62708519E0095570C /* Surpport */,
 				DDEC872E272870EE00C5C993 /* Protocol */,
-				DDCD5055270D6110004B0A9A /* Extension */,
 				DDB944B1270851470095570C /* Resource */,
 			);
 			path = Global;
@@ -251,6 +253,7 @@
 			children = (
 				DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */,
 				DD8111E22722A1D2002D38A0 /* TabBarController.swift */,
+				DDEC873A27287ABA00C5C993 /* BaseNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -377,6 +380,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDEC873B27287ABA00C5C993 /* BaseNavigationController.swift in Sources */,
 				DD8111E92722A27D002D38A0 /* AdditionViewController.swift in Sources */,
 				DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */,
 				DDB944A227084CD40095570C /* LoginViewController.swift in Sources */,
