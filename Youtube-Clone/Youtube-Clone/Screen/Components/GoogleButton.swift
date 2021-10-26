@@ -18,9 +18,9 @@ class GoogleButton: UIButton {
         didSet {
             switch type {
             case .filled:
-                setBackgroundColor(isHighlighted ? .Blue.withAlphaComponent(0.7) : .Blue, for: .normal )
+                setBackgroundColor(isHighlighted ? Const.Color.blue.withAlphaComponent(0.7) : Const.Color.blue, for: .normal )
             case .clear:
-                setTitleColor(isHighlighted ? .Blue : .Blue.withAlphaComponent(0.7), for: .normal)
+                setTitleColor(isHighlighted ? Const.Color.blue : Const.Color.blue.withAlphaComponent(0.7), for: .normal)
             case .none:
                 break
             }
@@ -49,13 +49,13 @@ class GoogleButton: UIButton {
         
         switch type {
         case .filled:
-            setBackgroundColor(.Blue, for: .normal)
-            setBackgroundColor(.LightGray, for: .disabled)
-            setTitleColor(.White, for: [.normal, .disabled])
+            setBackgroundColor(Const.Color.blue, for: .normal)
+            setBackgroundColor(Const.Color.lightGray, for: .disabled)
+            setTitleColor(Const.Color.white, for: [.normal, .disabled])
             tintColor = .white
             
         case .clear:
-            setTitleColor(.Blue, for: .normal)
+            setTitleColor(Const.Color.blue, for: .normal)
             
         case .none:
             break

@@ -12,7 +12,7 @@ class GoogleTextField: UITextField {
 // MARK: - Public Properties
     public var placeholderText: String? {
         didSet {
-            attributedPlaceholder = NSAttributedString(string: placeholderText ?? "", attributes: [.foregroundColor : UIColor.Gray, .font: UIFont.systemFont(ofSize: 15, weight: .regular)])
+            attributedPlaceholder = NSAttributedString(string: placeholderText ?? "", attributes: [.foregroundColor : Const.Color.gray, .font: UIFont.systemFont(ofSize: 15, weight: .regular)])
         }
     }
     
@@ -31,7 +31,7 @@ class GoogleTextField: UITextField {
         clipsToBounds = true
         borderStyle = .none
         layer.cornerRadius = 10
-        layer.borderColor = UIColor.LightGray.cgColor
+        layer.borderColor = Const.Color.lightGray.cgColor
         layer.borderWidth = 1
         font = .systemFont(ofSize: 15)
         addLeftPadding(with: 10)

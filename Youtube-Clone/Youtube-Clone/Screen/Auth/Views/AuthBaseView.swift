@@ -64,12 +64,12 @@ class AuthBaseView: UIView {
             return
         }
        
-        $0.tintColor = .Gray
+        $0.tintColor = Const.Color.gray
         $0.setTitle("비밀번호 표시", for: .normal)
         $0.contentHorizontalAlignment = .leading
         $0.titleLabel?.font = .systemFont(ofSize: 13, weight: .regular)
-        $0.setTitleColor(.Black, for: .normal)
-        $0.setTitleColor(.Gray, for: .selected)
+        $0.setTitleColor(Const.Color.black, for: .normal)
+        $0.setTitleColor(Const.Color.gray, for: .selected)
         $0.isSelected = false
         
         $0.setImage(UIImage(systemName: "checkmark.square"), for: .normal )
@@ -102,7 +102,7 @@ class AuthBaseView: UIView {
         앱 및 Safari에서도 Google 서비스에 로그인됩니다.
         """
         $0.font = .systemFont(ofSize: 14, weight: .regular)
-        $0.textColor = .Black
+        $0.textColor = Const.Color.black
         $0.numberOfLines = 0
         $0.textAlignment = .center
     }

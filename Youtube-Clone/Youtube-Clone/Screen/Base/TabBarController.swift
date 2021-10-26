@@ -41,8 +41,17 @@ extension TabBarController {
     }
     
     private func setTabBarUI() {
-        tabBar.tintColor = .Black
-        tabBar.unselectedItemTintColor = .Black
+        UITabBar.appearance().shadowImage = UIImage()
+        UITabBar.appearance().backgroundImage = UIImage()
+        UITabBar.appearance().backgroundColor = UIColor.white
+        UITabBar.appearance().barTintColor = Const.Color.black
         UITabBarItem.appearance().setTitleTextAttributes([.font: UIFont.systemFont(ofSize: 12, weight: .regular)], for: .normal)
+        UITabBar.appearance().tintColor = Const.Color.black
+        UITabBar.appearance().unselectedItemTintColor = Const.Color.black
+        
+        self.tabBar.layer.borderColor = Const.Color.lightGray.cgColor
+        self.tabBar.layer.borderWidth = 0.3
+        self.tabBar.clipsToBounds = true
     }
+
 }

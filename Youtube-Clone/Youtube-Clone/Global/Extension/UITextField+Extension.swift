@@ -5,7 +5,7 @@
 //  Created by 김윤서 on 2021/10/06.
 //
 
-import UIKit
+import UIKit.UITextField
 
 extension UITextField {
     func addLeftPadding(with padding: CGFloat) {
