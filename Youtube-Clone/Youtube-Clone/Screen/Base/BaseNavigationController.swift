@@ -15,16 +15,20 @@ class BaseNavigationController: UINavigationController {
         $0.customView = imageView
     }
     
-    private lazy var profileButton = UIBarButtonItem().then {
-        $0.customView = makeBarButtonItem(image: Const.Image.search, tag: 0)
+    private lazy var profileItem = UIBarButtonItem().then {
+        let imageView = UIImageView(image: UIImage(named: "wesoptiOSPartProfile")!)
+        imageView.snp.makeConstraints {
+            $0.width.height.equalTo(28)
+        }
+        $0.customView = imageView
     }
-    private lazy var searchButton = UIBarButtonItem().then {
+    private lazy var searchItem = UIBarButtonItem().then {
         $0.customView = makeBarButtonItem(image: Const.Image.search, tag: 1)
     }
-    private lazy var notificationButton = UIBarButtonItem().then {
+    private lazy var notificationItem = UIBarButtonItem().then {
         $0.customView = makeBarButtonItem(image: Const.Image.notification, tag: 2)
     }
-    private lazy var sharingButton = UIBarButtonItem().then {
+    private lazy var sharingItem = UIBarButtonItem().then {
         $0.customView = makeBarButtonItem(image: Const.Image.sharing, tag: 3)
     }
     
@@ -56,7 +60,7 @@ class BaseNavigationController: UINavigationController {
     private func initNavigationItem(navigationItem: UINavigationItem?) {
         let spacing = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)
         spacing.width = 12
-        navigationItem?.rightBarButtonItems = [profileButton, spacing, searchButton, spacing, notificationButton, spacing, sharingButton]
+        navigationItem?.rightBarButtonItems = [profileItem, spacing, searchItem, spacing, notificationItem, spacing, sharingItem]
         navigationItem?.leftBarButtonItem = logoItem
     }
     
