@@ -64,7 +64,7 @@ extension SignInViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case nextButton:
-            UIView.transition(with: self.view, duration: 1, options: .showHideTransitionViews) { [weak self] in
+            UIView.transition(with: self.view, duration: 0.1, options: .showHideTransitionViews) { [weak self] in
                 self?.dismiss(animated: true, completion: nil)
             } completion: { _ in
                 UIApplication.shared.windows.first?.rootViewController = MainNavigationController(rootViewController: TabBarController())
