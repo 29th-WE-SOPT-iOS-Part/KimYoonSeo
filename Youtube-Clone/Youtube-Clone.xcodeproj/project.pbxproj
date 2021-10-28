@@ -25,6 +25,9 @@
 		DD8111ED2722A302002D38A0 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EC2722A302002D38A0 /* LibraryViewController.swift */; };
 		DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */; };
 		DD81D3C7272A832A0066D159 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81D3C6272A83290066D159 /* MainNavigationController.swift */; };
+		DD81D3CD272A8A7F0066D159 /* Story.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81D3CC272A8A7F0066D159 /* Story.swift */; };
+		DD81D3CF272A8AC20066D159 /* StoryListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81D3CE272A8AC20066D159 /* StoryListModel.swift */; };
+		DD81D3D2272AA4650066D159 /* UIApplication+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81D3D1272AA4650066D159 /* UIApplication+Extension.swift */; };
 		DD8655512729893E00E4D164 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655502729893E00E4D164 /* VideoTableViewCell.swift */; };
 		DD86555427299B1500E4D164 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86555327299B1500E4D164 /* Video.swift */; };
 		DD8655562729A07200E4D164 /* VideoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655552729A07200E4D164 /* VideoListModel.swift */; };
@@ -63,6 +66,9 @@
 		DD8111EC2722A302002D38A0 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
 		DD81D3C6272A83290066D159 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		DD81D3CC272A8A7F0066D159 /* Story.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Story.swift; sourceTree = "<group>"; };
+		DD81D3CE272A8AC20066D159 /* StoryListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryListModel.swift; sourceTree = "<group>"; };
+		DD81D3D1272AA4650066D159 /* UIApplication+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIApplication+Extension.swift"; sourceTree = "<group>"; };
 		DD8655502729893E00E4D164 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		DD86555327299B1500E4D164 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		DD8655552729A07200E4D164 /* VideoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListModel.swift; sourceTree = "<group>"; };
@@ -135,6 +141,7 @@
 			isa = PBXGroup;
 			children = (
 				DD86555327299B1500E4D164 /* Video.swift */,
+				DD81D3CC272A8A7F0066D159 /* Story.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -250,6 +257,7 @@
 				DD74BB562721720300ECE8AA /* UIStackView+Extension.swift */,
 				DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */,
 				DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */,
+				DD81D3D1272AA4650066D159 /* UIApplication+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -304,6 +312,7 @@
 				DD86555B2729B07E00E4D164 /* Cell */,
 				DD8111E42722A219002D38A0 /* HomeViewController.swift */,
 				DD8655552729A07200E4D164 /* VideoListModel.swift */,
+				DD81D3CE272A8AC20066D159 /* StoryListModel.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -425,6 +434,7 @@
 				DDEC873B27287ABA00C5C993 /* BaseNavigationController.swift in Sources */,
 				DD8111E92722A27D002D38A0 /* AdditionViewController.swift in Sources */,
 				DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */,
+				DD81D3CF272A8AC20066D159 /* StoryListModel.swift in Sources */,
 				DD8655562729A07200E4D164 /* VideoListModel.swift in Sources */,
 				DDB944A227084CD40095570C /* LoginViewController.swift in Sources */,
 				DDCD5069270D76C7004B0A9A /* UIButton+Extension.swift in Sources */,
@@ -434,6 +444,7 @@
 				DD74BB4E2721691800ECE8AA /* AuthBaseView.swift in Sources */,
 				DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */,
 				DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */,
+				DD81D3D2272AA4650066D159 /* UIApplication+Extension.swift in Sources */,
 				DD8111E72722A228002D38A0 /* ShortsViewController.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
 				DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */,
@@ -454,6 +465,7 @@
 				DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */,
 				DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */,
 				DD8655512729893E00E4D164 /* VideoTableViewCell.swift in Sources */,
+				DD81D3CD272A8A7F0066D159 /* Story.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

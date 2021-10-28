@@ -26,9 +26,11 @@ class BaseNavigationController: UINavigationController {
     private func setNavigationBarAppearance() {
         let appearance = UINavigationBarAppearance()
         appearance.configureWithTransparentBackground()
+        appearance.backgroundColor = Const.Color.white
         
-        self.navigationBar.tintColor = Const.Color.black
         self.navigationBar.standardAppearance = appearance
         self.navigationBar.scrollEdgeAppearance = appearance
+        self.navigationBar.tintColor = Const.Color.black
+
     }
 }
