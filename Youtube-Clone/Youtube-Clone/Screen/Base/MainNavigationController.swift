@@ -44,16 +44,12 @@ class MainNavigationController: BaseNavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setNavigationBarAppearance()
     }
     
-    private func setNavigationBarAppearance() {
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithTransparentBackground()
-        
-        self.navigationBar.tintColor = Const.Color.black
-        self.navigationBar.standardAppearance = appearance
-        self.navigationBar.scrollEdgeAppearance = appearance
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationBar.isHidden = false
+        hidesBarsOnSwipe = true
     }
     
     private func initNavigationItem(navigationItem: UINavigationItem?) {

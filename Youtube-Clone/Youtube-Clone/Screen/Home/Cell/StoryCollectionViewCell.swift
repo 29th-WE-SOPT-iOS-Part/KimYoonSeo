@@ -31,9 +31,9 @@ class StoryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    public func updateData(image: String, text: String) {
-        imageView.image = UIImage(named: image)
-        label.text = text
+    public func updateData(story: Story) {
+        imageView.image = UIImage(named: story.image)
+        label.text = story.text
     }
 }
 

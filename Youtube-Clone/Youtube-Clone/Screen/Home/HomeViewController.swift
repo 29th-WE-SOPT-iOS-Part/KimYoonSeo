@@ -12,33 +12,59 @@ import Then
 
 class HomeViewController: BaseViewController {
     
+    private lazy var headerView = VideoTableHeaderView()
+    
     private lazy var tableView = UITableView().then {
-        $0.delegate = self
-        $0.dataSource = self
         $0.registerReusableCell(VideoTableViewCell.self)
         $0.rowHeight = UITableView.automaticDimension
         $0.estimatedRowHeight = 300
-        $0.tableHeaderView = VideoTableHeaderView()
-        $0.tableHeaderView?.frame.size.height = 104
+        $0.contentInset.top = headerViewHeight
+        $0.setContentOffset(CGPoint(x: 0, y: -headerViewHeight), animated: false)
     }
+    
+    lazy var topBarHeight = topbarHeight
+    
+    private let headerViewHeight: CGFloat = 104
     
     private var viedoList: [Video] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayouts()
+        setDelegation()
         updateData()
     }
     
+    private func setDelegation() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+    
     private func updateData() {
-        let list = VideoListModel()
-        self.viedoList = list.getVideoListModel()
+        let videoList = VideoListModel()
+        self.viedoList = videoList.getVideoListModel()
+        
+        let storyList = StoryListModel()
+        headerView.storyList = storyList.getVideoListModel()
     }
 }
 
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        print(scrollView.contentOffset.y)
+        if scrollView.contentOffset.y > -195 && scrollView.contentOffset.y < 0 {
+            headerView.snp.updateConstraints {
+                $0.top.equalToSuperview().offset(-195-scrollView.contentOffset.y)
+            }
+        } else if  scrollView.contentOffset.y < -195 {
+            headerView.snp.updateConstraints {
+                $0.top.equalToSuperview().offset(self.topbarHeight)
+            }
+        }
     }
 }
 
@@ -53,7 +79,6 @@ extension HomeViewController: UITableViewDataSource {
         return cell
     }
     
-    
 }
 
 
@@ -65,12 +90,20 @@ extension HomeViewController {
     }
     
     private func setViewHierarchy() {
-        view.addSubviews(tableView)
+        view.addSubviews(tableView, headerView)
     }
     
     private func setConstraints() {
+        print(self.topbarHeight)
         tableView.snp.makeConstraints {
-            $0.edges.equalTo(view.safeAreaLayoutGuide)
+            $0.top.equalToSuperview()
+            $0.leading.trailing.bottom.equalToSuperview()
+        }
+
+        headerView.snp.makeConstraints {
+            $0.top.equalToSuperview().offset(self.topbarHeight)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(headerViewHeight)
         }
     }
 }

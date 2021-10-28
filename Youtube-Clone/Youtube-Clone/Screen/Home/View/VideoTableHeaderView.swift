@@ -9,6 +9,8 @@ import UIKit
 
 class VideoTableHeaderView: UIView {
     
+    public var storyList: [Story] = []
+    
     private var collectionView: UICollectionView!
 
     override init(frame: CGRect) {
@@ -34,6 +36,10 @@ class VideoTableHeaderView: UIView {
         collectionView.showsVerticalScrollIndicator = false
         collectionView.showsHorizontalScrollIndicator = false
         collectionView.register(cell: StoryCollectionViewCell.self)
+    }
+    
+    public func updateData(storyList: [Story]) {
+        self.storyList = storyList
     }
 }
 
@@ -61,12 +67,12 @@ extension VideoTableHeaderView: UICollectionViewDelegate {
 
 extension VideoTableHeaderView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return storyList.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(forIndexPath: indexPath) as StoryCollectionViewCell
-        cell.updateData(image: "wesoptiOSPartProfile", text: "iOS짱")
+        cell.updateData(story: storyList[indexPath.row])
         return cell
     }
     
