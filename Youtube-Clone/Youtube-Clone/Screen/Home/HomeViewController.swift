@@ -22,8 +22,6 @@ class HomeViewController: BaseViewController {
         $0.setContentOffset(CGPoint(x: 0, y: -headerViewHeight), animated: false)
     }
     
-    lazy var topBarHeight = topbarHeight
-    
     private let headerViewHeight: CGFloat = 104
     
     private var viedoList: [Video] = []
@@ -56,14 +54,18 @@ extension HomeViewController: UITableViewDelegate {
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         print(scrollView.contentOffset.y)
-        if scrollView.contentOffset.y > -195 && scrollView.contentOffset.y < 0 {
+        if scrollView.contentOffset.y > -(topbarHeight+headerViewHeight) && scrollView.contentOffset.y < 0 {
+            headerView.isHidden = false
             headerView.snp.updateConstraints {
-                $0.top.equalToSuperview().offset(-195-scrollView.contentOffset.y)
+                $0.top.equalToSuperview().offset(-scrollView.contentOffset.y-headerViewHeight)
             }
-        } else if  scrollView.contentOffset.y < -195 {
+        } else if  scrollView.contentOffset.y <= -(topbarHeight+headerViewHeight) {
+            headerView.isHidden = false
             headerView.snp.updateConstraints {
                 $0.top.equalToSuperview().offset(self.topbarHeight)
             }
+        } else {
+            headerView.isHidden = true
         }
     }
 }
@@ -94,7 +96,6 @@ extension HomeViewController {
     }
     
     private func setConstraints() {
-        print(self.topbarHeight)
         tableView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.trailing.bottom.equalToSuperview()
