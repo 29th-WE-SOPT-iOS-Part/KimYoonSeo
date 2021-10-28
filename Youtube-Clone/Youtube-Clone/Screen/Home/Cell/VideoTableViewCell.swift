@@ -103,6 +103,3 @@ extension VideoTableViewCell {
     }
 }
 
-// MARK: - Reusable
-extension VideoTableViewCell: Reusable {}
-

@@ -7,13 +7,15 @@
 
 
 import UIKit.UITableView
+
+extension UITableViewCell: Reusable { }
  
 extension UITableView {
-    func registerReusableCell<T: UITableViewCell>(_: T.Type) where T: Reusable {
+    func registerReusableCell<T: UITableViewCell>(_: T.Type) {
         self.register(T.self, forCellReuseIdentifier: T.reuseIdentifier)
   }
 
-    func dequeueReusableCell<T: UITableViewCell>(indexPath: IndexPath) -> T where T: Reusable {
+    func dequeueReusableCell<T: UITableViewCell>(indexPath: IndexPath) -> T {
         return self.dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath as IndexPath) as! T
   }
 

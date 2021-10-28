@@ -18,6 +18,8 @@ class HomeViewController: BaseViewController {
         $0.registerReusableCell(VideoTableViewCell.self)
         $0.rowHeight = UITableView.automaticDimension
         $0.estimatedRowHeight = 300
+        $0.tableHeaderView = VideoTableHeaderView()
+        $0.tableHeaderView?.frame.size.height = 104
     }
     
     private var viedoList: [Video] = []
@@ -35,7 +37,9 @@ class HomeViewController: BaseViewController {
 }
 
 extension HomeViewController: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension HomeViewController: UITableViewDataSource {
@@ -56,11 +60,11 @@ extension HomeViewController: UITableViewDataSource {
 // MARK: - Layout
 extension HomeViewController {
     private func setLayouts() {
-        setViewHiearachy()
+        setViewHierarchy()
         setConstraints()
     }
     
-    private func setViewHiearachy() {
+    private func setViewHierarchy() {
         view.addSubviews(tableView)
     }
     

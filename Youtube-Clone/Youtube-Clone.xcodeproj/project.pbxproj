@@ -24,9 +24,12 @@
 		DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EA2722A2D9002D38A0 /* SubscriptionViewController.swift */; };
 		DD8111ED2722A302002D38A0 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EC2722A302002D38A0 /* LibraryViewController.swift */; };
 		DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */; };
+		DD81D3C7272A832A0066D159 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD81D3C6272A83290066D159 /* MainNavigationController.swift */; };
 		DD8655512729893E00E4D164 /* VideoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655502729893E00E4D164 /* VideoTableViewCell.swift */; };
 		DD86555427299B1500E4D164 /* Video.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD86555327299B1500E4D164 /* Video.swift */; };
 		DD8655562729A07200E4D164 /* VideoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655552729A07200E4D164 /* VideoListModel.swift */; };
+		DD8655582729AB7600E4D164 /* VideoTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655572729AB7600E4D164 /* VideoTableHeaderView.swift */; };
+		DD86555A2729AC9600E4D164 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655592729AC9600E4D164 /* StoryCollectionViewCell.swift */; };
 		DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD954D50270D544400DD5A9B /* Colors.xcassets */; };
 		DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954D53270D555A00DD5A9B /* GoogleButton.swift */; };
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
@@ -37,7 +40,7 @@
 		DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */; };
 		DDCD505E270D6ABC004B0A9A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */; };
 		DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5060270D6D4E004B0A9A /* Const.swift */; };
-		DDCD5067270D6FB4004B0A9A /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */; };
+		DDCD5067270D6FB4004B0A9A /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5066270D6FB4004B0A9A /* SignInViewController.swift */; };
 		DDCD5069270D76C7004B0A9A /* UIButton+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5068270D76C7004B0A9A /* UIButton+Extension.swift */; };
 		DDEC872B2728700A00C5C993 /* UITableView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */; };
 		DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */; };
@@ -59,9 +62,12 @@
 		DD8111EA2722A2D9002D38A0 /* SubscriptionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscriptionViewController.swift; sourceTree = "<group>"; };
 		DD8111EC2722A302002D38A0 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		DD8111EF2722B8EA002D38A0 /* TabBarItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItems.swift; sourceTree = "<group>"; };
+		DD81D3C6272A83290066D159 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		DD8655502729893E00E4D164 /* VideoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableViewCell.swift; sourceTree = "<group>"; };
 		DD86555327299B1500E4D164 /* Video.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Video.swift; sourceTree = "<group>"; };
 		DD8655552729A07200E4D164 /* VideoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListModel.swift; sourceTree = "<group>"; };
+		DD8655572729AB7600E4D164 /* VideoTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableHeaderView.swift; sourceTree = "<group>"; };
+		DD8655592729AC9600E4D164 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		DD954D50270D544400DD5A9B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		DD954D53270D555A00DD5A9B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -74,7 +80,7 @@
 		DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		DDCD5060270D6D4E004B0A9A /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
-		DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		DDCD5066270D6FB4004B0A9A /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		DDCD5068270D76C7004B0A9A /* UIButton+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extension.swift"; sourceTree = "<group>"; };
 		DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Reusable.swift"; sourceTree = "<group>"; };
 		DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionView+Reusable.swift"; sourceTree = "<group>"; };
@@ -112,7 +118,7 @@
 			children = (
 				DDB944A127084CD40095570C /* LoginViewController.swift */,
 				DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */,
-				DDCD5066270D6FB4004B0A9A /* WelcomeViewController.swift */,
+				DDCD5066270D6FB4004B0A9A /* SignInViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -131,6 +137,23 @@
 				DD86555327299B1500E4D164 /* Video.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		DD86555B2729B07E00E4D164 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				DD8655502729893E00E4D164 /* VideoTableViewCell.swift */,
+				DD8655592729AC9600E4D164 /* StoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		DD86555C2729B08A00E4D164 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				DD8655572729AB7600E4D164 /* VideoTableHeaderView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		DD954D49270D48B500DD5A9B /* Auth */ = {
@@ -269,6 +292,7 @@
 				DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */,
 				DDEC873A27287ABA00C5C993 /* BaseNavigationController.swift */,
 				DD8111E22722A1D2002D38A0 /* TabBarController.swift */,
+				DD81D3C6272A83290066D159 /* MainNavigationController.swift */,
 			);
 			path = Base;
 			sourceTree = "<group>";
@@ -276,8 +300,9 @@
 		DDEC8735272873CC00C5C993 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				DD86555C2729B08A00E4D164 /* View */,
+				DD86555B2729B07E00E4D164 /* Cell */,
 				DD8111E42722A219002D38A0 /* HomeViewController.swift */,
-				DD8655502729893E00E4D164 /* VideoTableViewCell.swift */,
 				DD8655552729A07200E4D164 /* VideoListModel.swift */,
 			);
 			path = Home;
@@ -413,15 +438,18 @@
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
 				DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */,
 				DD8111ED2722A302002D38A0 /* LibraryViewController.swift in Sources */,
+				DD86555A2729AC9600E4D164 /* StoryCollectionViewCell.swift in Sources */,
 				DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */,
+				DD81D3C7272A832A0066D159 /* MainNavigationController.swift in Sources */,
 				DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */,
 				DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */,
 				DD8111E32722A1D2002D38A0 /* TabBarController.swift in Sources */,
+				DD8655582729AB7600E4D164 /* VideoTableHeaderView.swift in Sources */,
 				DDEC8732272871D200C5C993 /* Color.swift in Sources */,
 				DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */,
 				DD74BB55272171E200ECE8AA /* UIView+Extension.swift in Sources */,
 				DD8111E52722A219002D38A0 /* HomeViewController.swift in Sources */,
-				DDCD5067270D6FB4004B0A9A /* WelcomeViewController.swift in Sources */,
+				DDCD5067270D6FB4004B0A9A /* SignInViewController.swift in Sources */,
 				DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */,
 				DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */,
 				DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */,
