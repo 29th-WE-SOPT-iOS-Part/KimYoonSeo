@@ -50,6 +50,7 @@
 		DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC872F272870FE00C5C993 /* Reusable.swift */; };
 		DDEC8732272871D200C5C993 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC8731272871D200C5C993 /* Color.swift */; };
 		DDEC873B27287ABA00C5C993 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEC873A27287ABA00C5C993 /* BaseNavigationController.swift */; };
+		DDF0E5DF272AF3AB00F3DBE6 /* TypeCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0E5DE272AF3AB00F3DBE6 /* TypeCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -93,6 +94,7 @@
 		DDEC872F272870FE00C5C993 /* Reusable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reusable.swift; sourceTree = "<group>"; };
 		DDEC8731272871D200C5C993 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		DDEC873A27287ABA00C5C993 /* BaseNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		DDF0E5DE272AF3AB00F3DBE6 /* TypeCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 			children = (
 				DD8655502729893E00E4D164 /* VideoTableViewCell.swift */,
 				DD8655592729AC9600E4D164 /* StoryCollectionViewCell.swift */,
+				DDF0E5DE272AF3AB00F3DBE6 /* TypeCollectionViewCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 				DDCD5067270D6FB4004B0A9A /* SignInViewController.swift in Sources */,
 				DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */,
 				DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */,
+				DDF0E5DF272AF3AB00F3DBE6 /* TypeCollectionViewCell.swift in Sources */,
 				DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */,
 				DD8655512729893E00E4D164 /* VideoTableViewCell.swift in Sources */,
 				DD81D3CD272A8A7F0066D159 /* Story.swift in Sources */,

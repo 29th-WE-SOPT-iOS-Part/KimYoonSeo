@@ -49,7 +49,6 @@ class MainNavigationController: BaseNavigationController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationBar.isHidden = false
-        hidesBarsOnSwipe = true
     }
     
     private func initNavigationItem(navigationItem: UINavigationItem?) {

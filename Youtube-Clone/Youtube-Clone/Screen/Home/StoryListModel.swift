@@ -38,7 +38,7 @@ struct StoryListModel {
         ]
     }
     
-    public func getVideoListModel() -> [Story] {
+    public func getStoryListModel() -> [Story] {
         return data ?? []
     }
   
