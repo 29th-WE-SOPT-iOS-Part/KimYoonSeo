@@ -59,7 +59,7 @@ extension SignUpViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            let vc = WelcomeViewController()
+            let vc = SignInViewController()
             vc.name = authBaseView.nameTextField.text
             vc.modalPresentationStyle = .fullScreen
             present(vc, animated: true, completion: nil)
@@ -77,11 +77,11 @@ extension SignUpViewController {
 // MARK: - Layout
 extension SignUpViewController {
     private func setLayouts() {
-        setViewHiearachy()
+        setViewHierarchy()
         setConstraints()
     }
     
-    private func setViewHiearachy() {
+    private func setViewHierarchy() {
         view.addSubviews(authBaseView)
     }
     

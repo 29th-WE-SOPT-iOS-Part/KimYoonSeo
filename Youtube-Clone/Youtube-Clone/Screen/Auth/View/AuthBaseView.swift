@@ -142,11 +142,11 @@ class AuthBaseView: UIView {
 // MARK: - Layouts
 extension AuthBaseView {
     private func setLayouts(){
-        setViewHiearachy()
+        setViewHierarchy()
         setConstraints()
     }
     
-    private func setViewHiearachy() {
+    private func setViewHierarchy() {
         addSubviews(logoImageView, titleLabel, textFieldStackView, nextButton, discriptionLabel, accountButton, maskingButton)
         textFieldStackView.addArrangedSubviews(nameTextField, emailTextField, passwordTextField)
     }

@@ -1,5 +1,5 @@
 //
-//  WelcomeViewController.swift
+//  SignInViewController.swift
 //  Youtube-Clone
 //
 //  Created by 김윤서 on 2021/10/06.
@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Then
 
-class WelcomeViewController: BaseViewController {
+class SignInViewController: BaseViewController {
 // MARK: - Public Properties
     public var name: String? {
         didSet {
@@ -59,7 +59,7 @@ class WelcomeViewController: BaseViewController {
 }
 
 // MARK: - @objc Function
-extension WelcomeViewController {
+extension SignInViewController {
     @objc
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
@@ -67,7 +67,7 @@ extension WelcomeViewController {
             UIView.transition(with: self.view, duration: 1, options: .showHideTransitionViews) { [weak self] in
                 self?.dismiss(animated: true, completion: nil)
             } completion: { _ in
-                UIApplication.shared.windows.first?.rootViewController = BaseNavigationController(rootViewController: TabBarController())
+                UIApplication.shared.windows.first?.rootViewController = MainNavigationController(rootViewController: TabBarController())
                 UIApplication.shared.windows.first?.makeKeyAndVisible()
             }
 
@@ -84,13 +84,13 @@ extension WelcomeViewController {
 }
 
 // MARK: - Layout
-extension WelcomeViewController {
+extension SignInViewController {
     private func setLayouts() {
-        setViewHiearachy()
+        setViewHierarchy()
         setConstraints()
     }
     
-    private func setViewHiearachy() {
+    private func setViewHierarchy() {
         view.addSubviews(logoImageView, welcomeLabel, nextButton, accountButton)
     }
     
