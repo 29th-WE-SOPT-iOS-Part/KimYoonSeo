@@ -12,7 +12,7 @@ import Then
 
 class HomeViewController: BaseViewController {
     
-    private lazy var headerView = VideoTableHeaderView()
+    private var headerView = VideoTableHeaderView()
     
     private lazy var tableView = UITableView().then {
         $0.registerReusableCell(VideoTableViewCell.self)
@@ -21,8 +21,7 @@ class HomeViewController: BaseViewController {
         $0.contentInset.top = headerViewHeight
         $0.setContentOffset(CGPoint(x: 0, y: -headerViewHeight), animated: false)
     }
-    
-    private let headerViewHeight: CGFloat = 104
+    private let headerViewHeight: CGFloat = 152
     
     private var viedoList: [Video] = []
 
@@ -43,7 +42,7 @@ class HomeViewController: BaseViewController {
         self.viedoList = videoList.getVideoListModel()
         
         let storyList = StoryListModel()
-        headerView.storyList = storyList.getVideoListModel()
+        headerView.updateData(storyList: storyList.getStoryListModel())
     }
 }
 
@@ -53,20 +52,27 @@ extension HomeViewController: UITableViewDelegate {
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        print(scrollView.contentOffset.y)
-        if scrollView.contentOffset.y > -(topbarHeight+headerViewHeight) && scrollView.contentOffset.y < 0 {
+        if scrollView.contentOffset.y > -headerViewHeight && scrollView.contentOffset.y < 0 {
             headerView.isHidden = false
             headerView.snp.updateConstraints {
-                $0.top.equalToSuperview().offset(-scrollView.contentOffset.y-headerViewHeight)
+                $0.top.equalTo(view.safeAreaLayoutGuide.snp.top).offset(-scrollView.contentOffset.y-headerViewHeight)
             }
-        } else if  scrollView.contentOffset.y <= -(topbarHeight+headerViewHeight) {
+        } else if  scrollView.contentOffset.y <= -headerViewHeight {
             headerView.isHidden = false
             headerView.snp.updateConstraints {
-                $0.top.equalToSuperview().offset(self.topbarHeight)
+                $0.top.equalTo(view.safeAreaLayoutGuide.snp.top)
             }
         } else {
             headerView.isHidden = true
         }
+    }
+    
+    func scrollViewWillBeginDecelerating(_ scrollView: UIScrollView) {
+       if scrollView.panGestureRecognizer.translation(in: scrollView).y < 0 {
+          navigationController?.setNavigationBarHidden(true, animated: true)
+       } else {
+          navigationController?.setNavigationBarHidden(false, animated: true)
+       }
     }
 }
 
@@ -97,12 +103,11 @@ extension HomeViewController {
     
     private func setConstraints() {
         tableView.snp.makeConstraints {
-            $0.top.equalToSuperview()
-            $0.leading.trailing.bottom.equalToSuperview()
+            $0.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
         }
 
         headerView.snp.makeConstraints {
-            $0.top.equalToSuperview().offset(self.topbarHeight)
+            $0.top.equalTo(view.safeAreaLayoutGuide)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(headerViewHeight)
         }

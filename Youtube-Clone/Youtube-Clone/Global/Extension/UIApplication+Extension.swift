@@ -29,7 +29,6 @@ import UIKit
 extension UIViewController {
 
     var topbarHeight: CGFloat {
-           return UIApplication.shared.statusBarHeight + 44
-//            (navigationController?.navigationBar.frame.height ?? 0.0)
+           return UIApplication.shared.statusBarHeight + (navigationController?.navigationBar.frame.height ?? 0.0)
        }
 }
