@@ -33,6 +33,7 @@
 		DD8655562729A07200E4D164 /* VideoListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655552729A07200E4D164 /* VideoListModel.swift */; };
 		DD8655582729AB7600E4D164 /* VideoTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655572729AB7600E4D164 /* VideoTableHeaderView.swift */; };
 		DD86555A2729AC9600E4D164 /* StoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD8655592729AC9600E4D164 /* StoryCollectionViewCell.swift */; };
+		DD91068E272C1C5200D425A0 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD91068D272C1C5200D425A0 /* UIViewController+Extension.swift */; };
 		DD954D51270D544400DD5A9B /* Colors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD954D50270D544400DD5A9B /* Colors.xcassets */; };
 		DD954D54270D555A00DD5A9B /* GoogleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD954D53270D555A00DD5A9B /* GoogleButton.swift */; };
 		DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB9449D27084CD40095570C /* AppDelegate.swift */; };
@@ -75,6 +76,7 @@
 		DD8655552729A07200E4D164 /* VideoListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoListModel.swift; sourceTree = "<group>"; };
 		DD8655572729AB7600E4D164 /* VideoTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoTableHeaderView.swift; sourceTree = "<group>"; };
 		DD8655592729AC9600E4D164 /* StoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		DD91068D272C1C5200D425A0 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		DD954D50270D544400DD5A9B /* Colors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Colors.xcassets; sourceTree = "<group>"; };
 		DD954D53270D555A00DD5A9B /* GoogleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleButton.swift; sourceTree = "<group>"; };
 		DDB9449A27084CD40095570C /* Youtube-Clone.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Youtube-Clone.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -261,6 +263,7 @@
 				DDEC872A2728700A00C5C993 /* UITableView+Reusable.swift */,
 				DDEC872C2728705800C5C993 /* UICollectionView+Reusable.swift */,
 				DD81D3D1272AA4650066D159 /* UIApplication+Extension.swift */,
+				DD91068D272C1C5200D425A0 /* UIViewController+Extension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 				DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */,
 				DD81D3C7272A832A0066D159 /* MainNavigationController.swift in Sources */,
 				DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */,
+				DD91068E272C1C5200D425A0 /* UIViewController+Extension.swift in Sources */,
 				DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */,
 				DD8111E32722A1D2002D38A0 /* TabBarController.swift in Sources */,
 				DD8655582729AB7600E4D164 /* VideoTableHeaderView.swift in Sources */,

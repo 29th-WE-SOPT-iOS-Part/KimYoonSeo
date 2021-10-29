@@ -32,7 +32,8 @@ class VideoTableViewCell: UITableViewCell {
     private let moreButton = UIButton().then {
         $0.setImage(Const.Image.menu, for: .normal)
     }
-
+    
+// MARK: - View Life Cycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         setLayouts()

@@ -12,6 +12,7 @@ import Then
 
 class HomeViewController: BaseViewController {
     
+// MARK:- Properties
     private var headerView = VideoTableHeaderView()
     
     private lazy var tableView = UITableView().then {
@@ -21,10 +22,12 @@ class HomeViewController: BaseViewController {
         $0.contentInset.top = headerViewHeight
         $0.setContentOffset(CGPoint(x: 0, y: -headerViewHeight), animated: false)
     }
+    
     private let headerViewHeight: CGFloat = 152
     
     private var viedoList: [Video] = []
 
+// MARK:- View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setLayouts()
@@ -32,6 +35,7 @@ class HomeViewController: BaseViewController {
         updateData()
     }
     
+// MARK:- Private Function
     private func setDelegation() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -46,6 +50,7 @@ class HomeViewController: BaseViewController {
     }
 }
 
+// MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
@@ -76,6 +81,7 @@ extension HomeViewController: UITableViewDelegate {
     }
 }
 
+// MARK: - UITableViewDataSource
 extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viedoList.count

@@ -9,6 +9,7 @@ import UIKit
 
 class TypeCollectionViewCell: UICollectionViewCell {
     
+// MARK: - Properties
     private lazy var button = UIButton().then {
         $0.layer.cornerRadius = 16
         $0.layer.borderWidth = 0.5
@@ -18,6 +19,7 @@ class TypeCollectionViewCell: UICollectionViewCell {
         $0.titleLabel?.font = .systemFont(ofSize: 14, weight: .regular)
         $0.setTitleColor(Const.Color.black, for: .normal)
         $0.addTarget(self, action: #selector(buttonDidTapped), for: .touchUpInside)
+        $0.contentEdgeInsets = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
     }
     
     override init(frame: CGRect) {
@@ -30,8 +32,9 @@ class TypeCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Public Functions
     public func updateData(text: String) {
-        button.setTitle("   \(text)   ", for: .normal)
+        button.setTitle(text, for: .normal)
     }
 }
 

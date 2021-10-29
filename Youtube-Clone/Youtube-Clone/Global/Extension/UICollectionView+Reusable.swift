@@ -5,7 +5,7 @@
 //  Created by 김윤서 on 2021/10/27.
 //
 
-import UIKit
+import UIKit.UICollectionView
 
 extension UICollectionReusableView: Reusable { }
 

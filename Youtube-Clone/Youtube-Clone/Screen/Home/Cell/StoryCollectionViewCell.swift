@@ -9,6 +9,7 @@ import UIKit
 
 class StoryCollectionViewCell: UICollectionViewCell {
     
+// MARK: - Properties
     private lazy var imageView = UIImageView().then {
         $0.layer.cornerRadius = 29
         $0.clipsToBounds = true
@@ -21,6 +22,7 @@ class StoryCollectionViewCell: UICollectionViewCell {
         $0.textColor = Const.Color.gray
     }
     
+// MARK: - View Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .white
@@ -31,6 +33,14 @@ class StoryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        imageView.image  = nil
+        label.text = nil
+    }
+    
+// MARK: - Public Functions
     public func updateData(story: Story) {
         imageView.image = UIImage(named: story.image)
         label.text = story.text

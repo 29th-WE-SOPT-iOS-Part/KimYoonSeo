@@ -5,7 +5,7 @@
 //  Created by 김윤서 on 2021/10/28.
 //
 
-import UIKit
+import UIKit.UIApplication
 
 extension UIApplication {
     var statusBarHeight: CGFloat {
@@ -24,11 +24,4 @@ extension UIApplication {
     }
 }
 
-import UIKit
 
-extension UIViewController {
-
-    var topbarHeight: CGFloat {
-           return UIApplication.shared.statusBarHeight + (navigationController?.navigationBar.frame.height ?? 0.0)
-       }
-}
