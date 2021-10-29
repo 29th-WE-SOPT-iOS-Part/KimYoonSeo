@@ -9,13 +9,15 @@ import UIKit
 
 class VideoTableHeaderView: UIView {
     
-    public var storyList: [Story] = []
+// MARK: - Properties
+    private var storyList: [Story] = []
     private var typeList: [String] = ["전체", "오늘", "이어서 시청하기", "시청하지 않음", "실시간", "게시물" ]
     
     
     private var storyCollectionView: UICollectionView!
     private var typeCollectionView: UICollectionView!
 
+// MARK: - View Life Cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -28,6 +30,7 @@ class VideoTableHeaderView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+// MARK: - Private Functions
     private func initStoryCollectionView() {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
@@ -55,12 +58,14 @@ class VideoTableHeaderView: UIView {
         typeCollectionView.showsHorizontalScrollIndicator = false
         typeCollectionView.register(cell: TypeCollectionViewCell.self)
     }
-    
+
+// MARK: - Public Functions
     public func updateData(storyList: [Story]) {
         self.storyList = storyList
     }
 }
 
+// MARK: - Layout
 extension VideoTableHeaderView {
     private func setLayouts() {
         setViewHierarchy()
