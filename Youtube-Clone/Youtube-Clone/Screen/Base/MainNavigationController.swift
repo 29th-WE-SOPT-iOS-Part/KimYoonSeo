@@ -50,11 +50,6 @@ class MainNavigationController: BaseNavigationController {
         super.viewDidLoad()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationBar.isHidden = false
-    }
-    
 // MARK: - init NavigationItem
     private func initNavigationItem(navigationItem: UINavigationItem?) {
         let spacing = UIBarButtonItem(barButtonSystemItem: .fixedSpace, target: nil, action: nil)

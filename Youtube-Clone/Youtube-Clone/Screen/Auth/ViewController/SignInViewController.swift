@@ -10,6 +10,11 @@ import UIKit
 import SnapKit
 import Then
 
+protocol SignInViewControllerDelegate: AnyObject {
+    func accountButtonDidTapped(_ signInViewController: SignInViewController)
+    func nextButtonDidTapped(_ signInViewController: SignInViewController)
+}
+
 class SignInViewController: BaseViewController {
 // MARK: - Public Properties
     public var name: String? {
@@ -21,6 +26,8 @@ class SignInViewController: BaseViewController {
             """
         }
     }
+    
+    public weak var delegate: SignInViewControllerDelegate?
 
 // MARK: - Private Properties
     private let welcomeLabel = UILabel().then {
@@ -64,18 +71,21 @@ extension SignInViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case nextButton:
-            UIView.transition(with: self.view, duration: 0.1, options: .showHideTransitionViews) { [weak self] in
-                self?.dismiss(animated: true, completion: nil)
-            } completion: { _ in
-                UIApplication.shared.windows.first?.rootViewController = MainNavigationController(rootViewController: TabBarController())
-                UIApplication.shared.windows.first?.makeKeyAndVisible()
-            }
+            delegate?.nextButtonDidTapped(self)
+            
+//            UIView.transition(with: self.view, duration: 0.1, options: .showHideTransitionViews) { [weak self] in
+//                self?.dismiss(animated: true, completion: nil)
+//            } completion: { _ in
+//                UIApplication.shared.windows.first?.rootViewController = MainNavigationController(rootViewController: TabBarController())
+//                UIApplication.shared.windows.first?.makeKeyAndVisible()
+//            }
 
         case accountButton:
-            guard let presentingViewController = presentingViewController as? UINavigationController else { return }
-            dismiss(animated: true) {
-                presentingViewController.popToRootViewController(animated: true)
-            }
+            delegate?.accountButtonDidTapped(self)
+//            guard let presentingViewController = presentingViewController as? UINavigationController else { return }
+//            dismiss(animated: true) {
+//                presentingViewController.popToRootViewController(animated: true)
+//            }
             
         default:
             break

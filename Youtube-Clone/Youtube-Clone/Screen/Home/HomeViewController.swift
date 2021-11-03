@@ -35,6 +35,11 @@ class HomeViewController: BaseViewController {
         updateData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBar.isHidden = false
+    }
+    
 // MARK:- Private Function
     private func setDelegation() {
         tableView.delegate = self
