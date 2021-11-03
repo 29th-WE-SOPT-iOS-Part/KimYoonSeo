@@ -10,7 +10,14 @@ import UIKit
 import SnapKit
 import Then
 
+protocol LoginViewControllerDelegate: AnyObject {
+    func loginButtonDidTapped(_ loginViewController: LoginViewController, name: String?)
+    func signUpButtonDidTapped(_ loginViewController: LoginViewController)
+}
+
 class LoginViewController: BaseViewController {
+// MARK: - Public Properties
+    public weak var coordinator: LoginViewControllerDelegate?
 
 // MARK: - Private Properties
     private let authBaseView = AuthBaseView(with: .login)
@@ -54,12 +61,14 @@ extension LoginViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            let vc = SignInViewController()
-            vc.name = authBaseView.nameTextField.text
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
+            coordinator?.loginButtonDidTapped(self, name: authBaseView.nameTextField.text)
+//            let vc = SignInViewController()
+//            vc.name = authBaseView.nameTextField.text
+//            vc.modalPresentationStyle = .fullScreen
+//            present(vc, animated: true, completion: nil)
         case authBaseView.accountButton:
-            navigationController?.pushViewController(SignUpViewController(), animated: true)
+            coordinator?.signUpButtonDidTapped(self)
+//            navigationController?.present(SignUpViewController(), animated: true)
         default:
             break
         }

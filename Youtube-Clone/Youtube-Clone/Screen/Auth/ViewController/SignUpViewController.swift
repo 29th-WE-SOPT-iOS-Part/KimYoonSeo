@@ -10,7 +10,14 @@ import UIKit
 import SnapKit
 import Then
 
+protocol SignUpViewControllerDelegate: AnyObject {
+    func signUpButtonDidTapped(_ signUpViewController: SignUpViewController, name: String?)
+}
+
 class SignUpViewController: BaseViewController {
+// MARK: - Public Properties
+    weak var coordinator: SignUpViewControllerDelegate?
+    
 // MARK: - Private Properties
     private let authBaseView = AuthBaseView(with: .signUp)
 
@@ -59,10 +66,7 @@ extension SignUpViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            let vc = SignInViewController()
-            vc.name = authBaseView.nameTextField.text
-            vc.modalPresentationStyle = .fullScreen
-            present(vc, animated: true, completion: nil)
+            coordinator?.signUpButtonDidTapped(self, name: authBaseView.nameTextField.text)
             
         case authBaseView.maskingButton:
             authBaseView.passwordTextField.isSecureTextEntry.toggle()
