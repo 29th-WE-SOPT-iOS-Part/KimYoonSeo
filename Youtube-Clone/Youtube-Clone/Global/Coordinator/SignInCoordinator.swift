@@ -8,8 +8,8 @@
 import UIKit
 
 protocol SignInCoordinatorDelegate: AnyObject {
-    func signInCoordinatorRequestedAccount(_ signInCoordinator: SignInCoordinator)
-    func signInCoordinatorRequestedNext(_ signInCoordinator: SignInCoordinator)
+    func goToSignUpViewController(_ signInCoordinator: SignInCoordinator)
+    func goToTabbarController(_ signInCoordinator: SignInCoordinator)
 }
 
 class SignInCoordinator: BaseCoodinator {
@@ -41,10 +41,10 @@ class SignInCoordinator: BaseCoodinator {
 
 extension SignInCoordinator: SignInViewControllerDelegate {
     func accountButtonDidTapped(_ signInViewController: SignInViewController) {
-        delegate?.signInCoordinatorRequestedAccount(self)
+        delegate?.goToSignUpViewController(self)
     }
     
     func nextButtonDidTapped(_ signInViewController: SignInViewController) {
-        delegate?.signInCoordinatorRequestedNext(self)
+        delegate?.goToTabbarController(self)
     }
 }

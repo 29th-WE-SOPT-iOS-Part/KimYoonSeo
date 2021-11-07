@@ -8,7 +8,7 @@
 import UIKit
 
 protocol SignUpCoordinatorDelegate: AnyObject {
-    func signUpCoordinatorRequestedSignUp(_ signUpViewController: SignUpCoordinator, name: String?)
+    func goToTabbarController(_ signUpViewController: SignUpCoordinator, name: String?)
 }
 
 class SignUpCoordinator: Coordinator {
@@ -32,6 +32,6 @@ class SignUpCoordinator: Coordinator {
 
 extension SignUpCoordinator: SignUpViewControllerDelegate {
     func signUpButtonDidTapped(_ signUpViewController: SignUpViewController, name: String?) {
-        delegate?.signUpCoordinatorRequestedSignUp(self, name: name)
+        delegate?.goToTabbarController(self, name: name)
     }
 }
