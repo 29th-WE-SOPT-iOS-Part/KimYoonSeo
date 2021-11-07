@@ -34,7 +34,7 @@ final class AppCoordinator: Coordinator{
 }
 
 extension AppCoordinator: LoginCoordinatorDelegate {
-    func loginCoordinatorRequestedLogin(_ loginCoorninator: LoginCoordinator, name: String?) {
+    func goToSignInViewController(_ loginCoorninator: LoginCoordinator, name: String?) {
         let signInCoordinator = SignInCoordinator(presenter: self.presenter)
         signInCoordinator.delegate = self
         signInCoordinator.name = name
@@ -42,7 +42,7 @@ extension AppCoordinator: LoginCoordinatorDelegate {
         self.addChildCoordinator(signInCoordinator)
     }
     
-    func loginCoordinatorRequestedSignUp(_ loginCoorninator: LoginCoordinator) {
+    func goToSignUpViewController(_ loginCoorninator: LoginCoordinator) {
         let signUpCoordinator = SignUpCoordinator(presenter: self.presenter)
         signUpCoordinator.delegate = self
         signUpCoordinator.start()
@@ -52,7 +52,7 @@ extension AppCoordinator: LoginCoordinatorDelegate {
 }
 
 extension AppCoordinator: SignUpCoordinatorDelegate {
-    func signUpCoordinatorRequestedSignUp(_ signUpViewController: SignUpCoordinator, name: String?) {
+    func goToTabbarController(_ signUpViewController: SignUpCoordinator, name: String?) {
         let signInCoordinator = SignInCoordinator(presenter: self.presenter)
         signInCoordinator.delegate = self
         signInCoordinator.name = name
@@ -62,7 +62,7 @@ extension AppCoordinator: SignUpCoordinatorDelegate {
 }
 
 extension AppCoordinator: SignInCoordinatorDelegate {
-    func signInCoordinatorRequestedAccount(_ signInCoordinator: SignInCoordinator) {
+    func goToSignUpViewController(_ signInCoordinator: SignInCoordinator) {
         signInCoordinator.rootViewController.dismiss(animated: true) {
             let signUpCoordinator = SignUpCoordinator(presenter: self.presenter)
             signUpCoordinator.delegate = self
@@ -73,7 +73,7 @@ extension AppCoordinator: SignInCoordinatorDelegate {
        
     }
     
-    func signInCoordinatorRequestedNext(_ signInCoordinator: SignInCoordinator) {
+    func goToTabbarController(_ signInCoordinator: SignInCoordinator) {
         let tabBarCoodinator = TabBarCoodinator(presenter: self.presenter)
         tabBarCoodinator.start()
         self.addChildCoordinator(tabBarCoodinator)
