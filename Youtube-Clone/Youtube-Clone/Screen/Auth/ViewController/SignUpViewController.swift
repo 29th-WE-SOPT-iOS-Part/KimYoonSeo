@@ -66,7 +66,10 @@ extension SignUpViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            coordinator?.signUpButtonDidTapped(self, name: authBaseView.nameTextField.text)
+            signUp {[weak self] _ in
+                guard let `self` = self else {return}
+                self.coordinator?.signUpButtonDidTapped(self, name: self.authBaseView.nameTextField.text)
+            }
             
         case authBaseView.maskingButton:
             authBaseView.passwordTextField.isSecureTextEntry.toggle()
@@ -93,5 +96,35 @@ extension SignUpViewController {
         authBaseView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+}
+
+// MARK: - Network
+extension SignUpViewController {
+    private func signUp(completion: @escaping(UserVO) -> Void){
+        guard let email = authBaseView.emailTextField.text else {return}
+        guard let password = authBaseView.passwordTextField.text else {return}
+        guard let name = authBaseView.nameTextField.text else {return}
+        
+        UserService.shared.signUp(email: email, password: password, name: name)
+            .subscribe { networkResult in
+                switch networkResult {
+                case .success(let data):
+                    if let data = data as? UserVO {
+                        completion(data)
+                    }
+                case .requestErr(let message):
+                    print("requestErr", message)
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                }
+            } onError: { err in
+                print("err")
+            }
+            .disposed(by: disposeBag)
     }
 }
