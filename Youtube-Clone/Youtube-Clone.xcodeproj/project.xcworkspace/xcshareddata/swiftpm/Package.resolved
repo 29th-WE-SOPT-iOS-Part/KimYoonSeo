@@ -2,6 +2,24 @@
   "object": {
     "pins": [
       {
+        "package": "Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "state": {
+          "branch": null,
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
+        }
+      },
+      {
+        "package": "AlamofireNetworkActivityLogger",
+        "repositoryURL": "https://github.com/konkab/AlamofireNetworkActivityLogger",
+        "state": {
+          "branch": null,
+          "revision": "8db9d4e27176905298e7215e3d800e349cdfa30b",
+          "version": "3.4.0"
+        }
+      },
+      {
         "package": "RxSwift",
         "repositoryURL": "https://github.com/ReactiveX/RxSwift",
         "state": {

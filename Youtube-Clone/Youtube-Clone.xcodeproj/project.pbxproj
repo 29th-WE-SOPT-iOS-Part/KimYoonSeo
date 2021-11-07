@@ -13,6 +13,16 @@
 		DD3FF76A273255F90057C80E /* SignUpCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FF769273255F90057C80E /* SignUpCoordinator.swift */; };
 		DD3FF76C273261A00057C80E /* SignInCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FF76B273261A00057C80E /* SignInCoordinator.swift */; };
 		DD3FF76E27326DC10057C80E /* TabBarCoodinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD3FF76D27326DC10057C80E /* TabBarCoodinator.swift */; };
+		DD5A2F2A273822F90065450A /* APIConstant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F29273822F90065450A /* APIConstant.swift */; };
+		DD5A2F2C273823050065450A /* NetworkResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F2B273823050065450A /* NetworkResult.swift */; };
+		DD5A2F2F273823D00065450A /* GenericResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F2E273823D00065450A /* GenericResponse.swift */; };
+		DD5A2F31273824420065450A /* UserVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F30273824420065450A /* UserVO.swift */; };
+		DD5A2F35273825E60065450A /* SignUpVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F34273825E60065450A /* SignUpVO.swift */; };
+		DD5A2F37273829400065450A /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F36273829400065450A /* UserService.swift */; };
+		DD5A2F3A273829B40065450A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = DD5A2F39273829B40065450A /* Alamofire */; };
+		DD5A2F3D27383B340065450A /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F3C27383B340065450A /* APIClient.swift */; };
+		DD5A2F402738456D0065450A /* AlamofireNetworkActivityLogger in Frameworks */ = {isa = PBXBuildFile; productRef = DD5A2F3F2738456D0065450A /* AlamofireNetworkActivityLogger */; };
+		DD5A2F42273852430065450A /* LoginVO.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD5A2F41273852430065450A /* LoginVO.swift */; };
 		DD74BB402721610B00ECE8AA /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB3F2721610B00ECE8AA /* SnapKit */; };
 		DD74BB432721612100ECE8AA /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB422721612100ECE8AA /* Then */; };
 		DD74BB462721613700ECE8AA /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = DD74BB452721613700ECE8AA /* RxCocoa */; };
@@ -67,6 +77,14 @@
 		DD3FF769273255F90057C80E /* SignUpCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpCoordinator.swift; sourceTree = "<group>"; };
 		DD3FF76B273261A00057C80E /* SignInCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInCoordinator.swift; sourceTree = "<group>"; };
 		DD3FF76D27326DC10057C80E /* TabBarCoodinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoodinator.swift; sourceTree = "<group>"; };
+		DD5A2F29273822F90065450A /* APIConstant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConstant.swift; sourceTree = "<group>"; };
+		DD5A2F2B273823050065450A /* NetworkResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkResult.swift; sourceTree = "<group>"; };
+		DD5A2F2E273823D00065450A /* GenericResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenericResponse.swift; sourceTree = "<group>"; };
+		DD5A2F30273824420065450A /* UserVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserVO.swift; sourceTree = "<group>"; };
+		DD5A2F34273825E60065450A /* SignUpVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVO.swift; sourceTree = "<group>"; };
+		DD5A2F36273829400065450A /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		DD5A2F3C27383B340065450A /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		DD5A2F41273852430065450A /* LoginVO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVO.swift; sourceTree = "<group>"; };
 		DD74BB4B2721630A00ECE8AA /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		DD74BB4D2721691800ECE8AA /* AuthBaseView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthBaseView.swift; sourceTree = "<group>"; };
 		DD74BB4F2721694F00ECE8AA /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +137,8 @@
 				DD74BB462721613700ECE8AA /* RxCocoa in Frameworks */,
 				DD74BB402721610B00ECE8AA /* SnapKit in Frameworks */,
 				DD74BB4A2721613700ECE8AA /* RxSwift in Frameworks */,
+				DD5A2F402738456D0065450A /* AlamofireNetworkActivityLogger in Frameworks */,
+				DD5A2F3A273829B40065450A /* Alamofire in Frameworks */,
 				DD74BB482721613700ECE8AA /* RxRelay in Frameworks */,
 				DD74BB432721612100ECE8AA /* Then in Frameworks */,
 			);
@@ -138,6 +158,37 @@
 				DD3FF76D27326DC10057C80E /* TabBarCoodinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		DD5A2F27273822A30065450A /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				DD5A2F29273822F90065450A /* APIConstant.swift */,
+				DD5A2F3C27383B340065450A /* APIClient.swift */,
+				DD5A2F2B273823050065450A /* NetworkResult.swift */,
+				DD5A2F2E273823D00065450A /* GenericResponse.swift */,
+				DD5A2F2D2738232A0065450A /* Service */,
+				DD5A2F28273822C80065450A /* APIModel */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		DD5A2F28273822C80065450A /* APIModel */ = {
+			isa = PBXGroup;
+			children = (
+				DD5A2F30273824420065450A /* UserVO.swift */,
+				DD5A2F34273825E60065450A /* SignUpVO.swift */,
+				DD5A2F41273852430065450A /* LoginVO.swift */,
+			);
+			path = APIModel;
+			sourceTree = "<group>";
+		};
+		DD5A2F2D2738232A0065450A /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				DD5A2F36273829400065450A /* UserService.swift */,
+			);
+			path = Service;
 			sourceTree = "<group>";
 		};
 		DD8111DF27229FC5002D38A0 /* View */ = {
@@ -230,6 +281,7 @@
 		DDB9449C27084CD40095570C /* Youtube-Clone */ = {
 			isa = PBXGroup;
 			children = (
+				DD5A2F27273822A30065450A /* Network */,
 				DDEC87332728730500C5C993 /* Global */,
 				DDB944B5270851820095570C /* Screen */,
 			);
@@ -403,6 +455,8 @@
 				DD74BB452721613700ECE8AA /* RxCocoa */,
 				DD74BB472721613700ECE8AA /* RxRelay */,
 				DD74BB492721613700ECE8AA /* RxSwift */,
+				DD5A2F39273829B40065450A /* Alamofire */,
+				DD5A2F3F2738456D0065450A /* AlamofireNetworkActivityLogger */,
 			);
 			productName = "Youtube-Clone";
 			productReference = DDB9449A27084CD40095570C /* Youtube-Clone.app */;
@@ -435,6 +489,8 @@
 				DD74BB3E2721610B00ECE8AA /* XCRemoteSwiftPackageReference "SnapKit" */,
 				DD74BB412721612000ECE8AA /* XCRemoteSwiftPackageReference "Then" */,
 				DD74BB442721613700ECE8AA /* XCRemoteSwiftPackageReference "RxSwift" */,
+				DD5A2F38273829B40065450A /* XCRemoteSwiftPackageReference "Alamofire" */,
+				DD5A2F3E2738456D0065450A /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */,
 			);
 			productRefGroup = DDB9449B27084CD40095570C /* Products */;
 			projectDirPath = "";
@@ -467,6 +523,7 @@
 				DD8111E92722A27D002D38A0 /* AdditionViewController.swift in Sources */,
 				DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */,
 				DD81D3CF272A8AC20066D159 /* StoryListModel.swift in Sources */,
+				DD5A2F2A273822F90065450A /* APIConstant.swift in Sources */,
 				DD3FF76C273261A00057C80E /* SignInCoordinator.swift in Sources */,
 				DD8655562729A07200E4D164 /* VideoListModel.swift in Sources */,
 				DDB944A227084CD40095570C /* LoginViewController.swift in Sources */,
@@ -483,16 +540,21 @@
 				DD8111E72722A228002D38A0 /* ShortsViewController.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
 				DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */,
+				DD5A2F2C273823050065450A /* NetworkResult.swift in Sources */,
 				DD8111ED2722A302002D38A0 /* LibraryViewController.swift in Sources */,
 				DD86555A2729AC9600E4D164 /* StoryCollectionViewCell.swift in Sources */,
 				DD3FF76E27326DC10057C80E /* TabBarCoodinator.swift in Sources */,
 				DD3FF76A273255F90057C80E /* SignUpCoordinator.swift in Sources */,
 				DDEC872D2728705800C5C993 /* UICollectionView+Reusable.swift in Sources */,
 				DD3FF768273253420057C80E /* LoginCoordinator.swift in Sources */,
+				DD5A2F2F273823D00065450A /* GenericResponse.swift in Sources */,
 				DD81D3C7272A832A0066D159 /* MainNavigationController.swift in Sources */,
 				DD74BB572721720300ECE8AA /* UIStackView+Extension.swift in Sources */,
+				DD5A2F35273825E60065450A /* SignUpVO.swift in Sources */,
+				DD5A2F42273852430065450A /* LoginVO.swift in Sources */,
 				DD91068E272C1C5200D425A0 /* UIViewController+Extension.swift in Sources */,
 				DD74BB4C2721630A00ECE8AA /* Image.swift in Sources */,
+				DD5A2F3D27383B340065450A /* APIClient.swift in Sources */,
 				DD8111E32722A1D2002D38A0 /* TabBarController.swift in Sources */,
 				DD8655582729AB7600E4D164 /* VideoTableHeaderView.swift in Sources */,
 				DDEC8732272871D200C5C993 /* Color.swift in Sources */,
@@ -502,8 +564,10 @@
 				DDCD5067270D6FB4004B0A9A /* SignInViewController.swift in Sources */,
 				DD8111EB2722A2D9002D38A0 /* SubscriptionViewController.swift in Sources */,
 				DD74BB502721694F00ECE8AA /* BaseViewController.swift in Sources */,
+				DD5A2F31273824420065450A /* UserVO.swift in Sources */,
 				DDF0E5DF272AF3AB00F3DBE6 /* TypeCollectionViewCell.swift in Sources */,
 				DDCD5061270D6D4E004B0A9A /* Const.swift in Sources */,
+				DD5A2F37273829400065450A /* UserService.swift in Sources */,
 				DD8655512729893E00E4D164 /* VideoTableViewCell.swift in Sources */,
 				DD81D3CD272A8A7F0066D159 /* Story.swift in Sources */,
 			);
@@ -699,6 +763,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		DD5A2F38273829B40065450A /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.4;
+			};
+		};
+		DD5A2F3E2738456D0065450A /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/konkab/AlamofireNetworkActivityLogger";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.4.0;
+			};
+		};
 		DD74BB3E2721610B00ECE8AA /* XCRemoteSwiftPackageReference "SnapKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SnapKit/SnapKit";
@@ -726,6 +806,16 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		DD5A2F39273829B40065450A /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD5A2F38273829B40065450A /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		DD5A2F3F2738456D0065450A /* AlamofireNetworkActivityLogger */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DD5A2F3E2738456D0065450A /* XCRemoteSwiftPackageReference "AlamofireNetworkActivityLogger" */;
+			productName = AlamofireNetworkActivityLogger;
+		};
 		DD74BB3F2721610B00ECE8AA /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = DD74BB3E2721610B00ECE8AA /* XCRemoteSwiftPackageReference "SnapKit" */;

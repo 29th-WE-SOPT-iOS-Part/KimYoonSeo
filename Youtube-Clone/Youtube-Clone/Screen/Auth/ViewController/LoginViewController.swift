@@ -61,14 +61,13 @@ extension LoginViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            coordinator?.loginButtonDidTapped(self, name: authBaseView.nameTextField.text)
-//            let vc = SignInViewController()
-//            vc.name = authBaseView.nameTextField.text
-//            vc.modalPresentationStyle = .fullScreen
-//            present(vc, animated: true, completion: nil)
+            login { [weak self] _ in
+                guard let `self` = self else {return}
+                self.coordinator?.loginButtonDidTapped(self, name: self.authBaseView.nameTextField.text)
+            }
+            
         case authBaseView.accountButton:
             coordinator?.signUpButtonDidTapped(self)
-//            navigationController?.present(SignUpViewController(), animated: true)
         default:
             break
         }
@@ -91,5 +90,34 @@ extension LoginViewController {
         authBaseView.snp.makeConstraints {
             $0.edges.equalTo(view.safeAreaLayoutGuide)
         }
+    }
+}
+
+// MARK: - Network
+extension LoginViewController {
+    private func login(completion: @escaping(UserVO) -> Void){
+        guard let email = authBaseView.emailTextField.text else {return}
+        guard let password = authBaseView.passwordTextField.text else {return}
+        
+        UserService.shared.login(email: email, password: password)
+            .subscribe { networkResult in
+                switch networkResult {
+                case .success(let data):
+                    if let data = data as? UserVO {
+                        completion(data)
+                    }
+                case .requestErr(let message):
+                    print("requestErr", message)
+                case .pathErr:
+                    print("pathErr")
+                case .serverErr:
+                    print("serverErr")
+                case .networkFail:
+                    print("networkFail")
+                }
+            } onError: { err in
+                print("err")
+            }
+            .disposed(by: disposeBag)
     }
 }
