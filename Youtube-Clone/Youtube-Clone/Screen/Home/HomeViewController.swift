@@ -10,9 +10,15 @@ import UIKit
 import SnapKit
 import Then
 
+protocol TabBarControllerDelegate: AnyObject {
+    func profileButtonDidTapped(_ viewController: BaseViewController)
+}
+
 class HomeViewController: BaseViewController {
     
 // MARK:- Properties
+    weak var delegate: TabBarControllerDelegate?
+
     private var headerView = VideoTableHeaderView()
     
     private lazy var tableView = UITableView().then {
@@ -33,6 +39,7 @@ class HomeViewController: BaseViewController {
         setLayouts()
         setDelegation()
         updateData()
+        registerNotificationCenter()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -52,6 +59,17 @@ class HomeViewController: BaseViewController {
         
         let storyList = StoryListModel()
         headerView.updateData(storyList: storyList.getStoryListModel())
+    }
+
+    private func registerNotificationCenter() {
+        NotificationCenter.default.addObserver(self, selector: #selector(goToLoginViewController(_:)), name: .touchProfileButton, object: nil)
+    }
+}
+
+extension HomeViewController {
+    @objc
+    private func goToLoginViewController(_ notification: Notification) {
+        delegate?.profileButtonDidTapped(self)
     }
 }
 

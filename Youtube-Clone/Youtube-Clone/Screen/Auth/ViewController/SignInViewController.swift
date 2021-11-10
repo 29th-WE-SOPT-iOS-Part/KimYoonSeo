@@ -72,20 +72,9 @@ extension SignInViewController {
         switch sender {
         case nextButton:
             delegate?.nextButtonDidTapped(self)
-            
-//            UIView.transition(with: self.view, duration: 0.1, options: .showHideTransitionViews) { [weak self] in
-//                self?.dismiss(animated: true, completion: nil)
-//            } completion: { _ in
-//                UIApplication.shared.windows.first?.rootViewController = MainNavigationController(rootViewController: TabBarController())
-//                UIApplication.shared.windows.first?.makeKeyAndVisible()
-//            }
 
         case accountButton:
             delegate?.accountButtonDidTapped(self)
-//            guard let presentingViewController = presentingViewController as? UINavigationController else { return }
-//            dismiss(animated: true) {
-//                presentingViewController.popToRootViewController(animated: true)
-//            }
             
         default:
             break

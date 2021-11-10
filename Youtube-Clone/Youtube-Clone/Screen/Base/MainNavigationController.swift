@@ -16,12 +16,8 @@ class MainNavigationController: BaseNavigationController {
         $0.customView = imageView
     }
     
-    private lazy var profileItem = UIBarButtonItem().then {
-        let imageView = UIImageView(image: UIImage(named: "wesoptiOSPartProfile")!)
-        imageView.snp.makeConstraints {
-            $0.width.height.equalTo(28)
-        }
-        $0.customView = imageView
+    public lazy var profileItem = UIBarButtonItem().then {
+        $0.customView = makeBarButtonItem(image: UIImage(named: "wesoptiOSPartProfile")!, tag: 0)
     }
     
     private lazy var searchItem = UIBarButtonItem().then {
@@ -67,10 +63,15 @@ class MainNavigationController: BaseNavigationController {
         button.addTarget(self, action: #selector(buttonDidTapped(_:)), for: .touchUpInside)
         return button
     }
-    
+
     @objc
     private func buttonDidTapped(_ sender: UIButton) {
-        print("click")
+        if sender.tag == 0 {
+            NotificationCenter.default.post(name: .touchProfileButton, object: nil)
+        }
     }
 
+}
+extension Notification.Name {
+    static let touchProfileButton = Notification.Name("touchProfileButton")
 }

@@ -9,6 +9,7 @@ import Foundation
 
 import Alamofire
 import RxSwift
+import UIKit
 
 enum APIClientError: Error {
     case makeRequestFailed
@@ -28,7 +29,7 @@ enum APIClientEncodingType {
 final class APIClient {
     static let shared = APIClient()
     
-    public func makeRequest(_ url: URLConvertible, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, encodingType: APIClientEncodingType, headers: HTTPHeaders? = nil) -> URLRequest? {
+    public func makeRequest(url: URLConvertible, method: Alamofire.HTTPMethod, parameters: Parameters? = nil, encodingType: APIClientEncodingType, headers: HTTPHeaders? = nil) -> URLRequest? {
         var urlRequest: URLRequest
         do {
             urlRequest = try URLRequest(url: url.asURL(), cachePolicy: .reloadIgnoringLocalCacheData, timeoutInterval: 10.0)
@@ -77,13 +78,24 @@ final class APIClient {
         else {
             return .pathErr
         }
-
+        
         switch statusCode {
-
-        case 200: return .success(decodedData.data as Any)
-        case 400: return .requestErr(decodedData.message)
-        case 500: return .serverErr
-        default: return .networkFail
+        case 200: return .success(decodedData)
+        case 400:
+            statusAlert(decodedData)
+            return .requestErr(decodedData.message)
+        case 500:
+            statusAlert(decodedData)
+            return .serverErr
+        default:
+            statusAlert(decodedData)
+            return .networkFail
+        }
+    }
+    
+    func statusAlert<T: Codable>( _ data: GenericResponse<T>, okAction : ((UIAlertAction) -> Void)? = nil){
+        if let vc = UIApplication.topViewController() {
+            vc.makeAlert(title: vc.title ?? "", message: data.message)
         }
     }
 

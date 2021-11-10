@@ -7,14 +7,14 @@
 
 import UIKit
 
-
-
 class TabBarController: UITabBarController {
+
+    weak var tabBarControllerDelegate: TabBarControllerDelegate?
     
 // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setTabBarItems()
+//        setTabBarItems()
         setTabBarUI()
     }
     

@@ -12,26 +12,34 @@ struct UserService{
     
     func login(email : String,
                password : String) -> Observable<NetworkResult<Any>>{
-        guard let urlRequest = APIClient.shared.makeRequest(APIConstants.User.loginURL,
-                                                 method: .post,
-                                                 parameters: ["email" : email,
-                                                              "password" : password
-                                                 ],
-                                                 encodingType: APIClientEncodingType.JSONEncodingDefault) else {return .error(APIClientError.makeRequestFailed)}
-        
+
+        dump(email)
+        dump(password)
+        guard let urlRequest = APIClient.shared.makeRequest(
+                url: APIConstants.User.loginURL,
+                method: .post,
+                parameters: [
+                    "email" : email,
+                    "password" : password
+                ],
+                encodingType: APIClientEncodingType.JSONEncodingDefault)
+        else { return .error(APIClientError.makeRequestFailed) }
+
         return APIClient.shared.request(urlRequest: urlRequest, UserVO.self)
     }
     
     func signUp(email : String,
                 password : String,
                 name: String) -> Observable<NetworkResult<Any>>{
-        guard let urlRequest = APIClient.shared.makeRequest(APIConstants.User.signUpURL,
-                                                 method: .post,
-                                                 parameters: ["email" : email,
-                                                              "password" : password,
-                                                              "name": name
-                                                 ],
-                                                 encodingType: APIClientEncodingType.JSONEncodingDefault) else {return .error(APIClientError.makeRequestFailed)}
+
+        guard let urlRequest = APIClient.shared.makeRequest(
+                url: APIConstants.User.signUpURL,
+                method: .post,
+                parameters: ["email" : email,
+                             "password" : password,
+                             "name": name
+                ],
+                encodingType: APIClientEncodingType.JSONEncodingDefault) else {return .error(APIClientError.makeRequestFailed)}
         
         return APIClient.shared.request(urlRequest: urlRequest, UserVO.self)
     }
