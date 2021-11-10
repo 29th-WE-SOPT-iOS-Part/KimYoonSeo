@@ -23,9 +23,15 @@ class LoginViewController: BaseViewController {
     private let authBaseView = AuthBaseView(with: .login)
 
 // MARK: - View Life Cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.isHidden = true
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        authBaseView.titleText = "로그인"
+        title = "로그인"
+        authBaseView.titleText = title
         setTargets()
         setLayouts()
     }
@@ -61,9 +67,11 @@ extension LoginViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            login { [weak self] _ in
+            login { [weak self] response in
                 guard let `self` = self else {return}
-                self.coordinator?.loginButtonDidTapped(self, name: self.authBaseView.nameTextField.text)
+                self.makeAlert(title: "로그인", message: response.message, okAction: { _ in
+                    self.coordinator?.loginButtonDidTapped(self, name: self.authBaseView.nameTextField.text)
+                })
             }
             
         case authBaseView.accountButton:
@@ -95,16 +103,17 @@ extension LoginViewController {
 
 // MARK: - Network
 extension LoginViewController {
-    private func login(completion: @escaping(UserVO) -> Void){
+    private func login(completion: @escaping(GenericResponse<UserVO>) -> Void){
         guard let email = authBaseView.emailTextField.text else {return}
         guard let password = authBaseView.passwordTextField.text else {return}
         
         UserService.shared.login(email: email, password: password)
             .subscribe { networkResult in
                 switch networkResult {
-                case .success(let data):
-                    if let data = data as? UserVO {
-                        completion(data)
+                case .success(let response):
+                    dump(response)
+                    if let response = response as? GenericResponse<UserVO> {
+                        completion(response)
                     }
                 case .requestErr(let message):
                     print("requestErr", message)

@@ -8,7 +8,6 @@
 import UIKit
 
 final class AppCoordinator: Coordinator{
-
     
     var presenter: UINavigationController
     var childCoordinators: [Coordinator]
@@ -19,16 +18,15 @@ final class AppCoordinator: Coordinator{
         self.window = window
         self.window.backgroundColor = .white
         self.presenter = UINavigationController()
-        self.presenter.isNavigationBarHidden = true
         self.childCoordinators = []
     }
 
     func start() {
-        window.rootViewController = presenter
-        let coordinator = LoginCoordinator(presenter: presenter)
-        childCoordinators.append(coordinator)
-        coordinator.start()
+        let coordinator = TabBarCoodinator(presenter: presenter)
         coordinator.delegate = self
+        self.presenter = MainNavigationController(rootViewController: coordinator.makeTabBar())
+        window.rootViewController = presenter
+        childCoordinators.append(coordinator)
         window.makeKeyAndVisible()
     }
 }
@@ -64,20 +62,25 @@ extension AppCoordinator: SignUpCoordinatorDelegate {
 extension AppCoordinator: SignInCoordinatorDelegate {
     func goToSignUpViewController(_ signInCoordinator: SignInCoordinator) {
         signInCoordinator.rootViewController.dismiss(animated: true) {
-            let signUpCoordinator = SignUpCoordinator(presenter: self.presenter)
-            signUpCoordinator.delegate = self
-            signUpCoordinator.start()
+            let loginCoordinator = LoginCoordinator(presenter: self.presenter)
+            loginCoordinator.delegate = self
+            loginCoordinator.start()
+            self.addChildCoordinator(loginCoordinator)
             self.removeChildCoordinator(signInCoordinator)
-            self.addChildCoordinator(signUpCoordinator)
         }
-       
     }
     
     func goToTabbarController(_ signInCoordinator: SignInCoordinator) {
-        let tabBarCoodinator = TabBarCoodinator(presenter: self.presenter)
-        tabBarCoodinator.start()
-        self.addChildCoordinator(tabBarCoodinator)
-        self.removeChildCoordinator(signInCoordinator)
-        
+        self.start()
+    }
+}
+
+extension AppCoordinator: TabBarCoodinatorDelegate {
+    func goToLoginViewController(_ coordinator: TabBarCoodinator) {
+        self.removeChildCoordinator(coordinator)
+        let loginCoordinator = LoginCoordinator(presenter: self.presenter)
+        loginCoordinator.start()
+        loginCoordinator.delegate = self
+        self.addChildCoordinator(loginCoordinator)
     }
 }

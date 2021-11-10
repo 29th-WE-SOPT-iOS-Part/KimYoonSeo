@@ -24,7 +24,8 @@ class SignUpViewController: BaseViewController {
 // MARK: - View Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        authBaseView.titleText = "회원가입"
+        title = "회원가입"
+        authBaseView.titleText = title
         setLayouts()
         hideNavigationBar()
         setTargets()
@@ -66,9 +67,12 @@ extension SignUpViewController {
     private func buttonDidTapped(_ sender: UIButton) {
         switch sender {
         case authBaseView.nextButton:
-            signUp {[weak self] _ in
+            requestSignUp {[weak self] response in
                 guard let `self` = self else {return}
-                self.coordinator?.signUpButtonDidTapped(self, name: self.authBaseView.nameTextField.text)
+                self.makeAlert(title: "회원가입", message: response.message, okAction: { _ in
+                    guard let user = response.data else {return}
+                    self.coordinator?.signUpButtonDidTapped(self, name: user.name)
+                })
             }
             
         case authBaseView.maskingButton:
@@ -101,7 +105,7 @@ extension SignUpViewController {
 
 // MARK: - Network
 extension SignUpViewController {
-    private func signUp(completion: @escaping(UserVO) -> Void){
+    private func requestSignUp(completion: @escaping(GenericResponse<UserVO>) -> Void){
         guard let email = authBaseView.emailTextField.text else {return}
         guard let password = authBaseView.passwordTextField.text else {return}
         guard let name = authBaseView.nameTextField.text else {return}
@@ -109,9 +113,9 @@ extension SignUpViewController {
         UserService.shared.signUp(email: email, password: password, name: name)
             .subscribe { networkResult in
                 switch networkResult {
-                case .success(let data):
-                    if let data = data as? UserVO {
-                        completion(data)
+                case .success(let response):
+                    if let response = response as? GenericResponse<UserVO> {
+                        completion(response)
                     }
                 case .requestErr(let message):
                     print("requestErr", message)
@@ -121,6 +125,7 @@ extension SignUpViewController {
                     print("serverErr")
                 case .networkFail:
                     print("networkFail")
+            
                 }
             } onError: { err in
                 print("err")
