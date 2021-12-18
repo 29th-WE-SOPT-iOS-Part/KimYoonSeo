@@ -56,6 +56,7 @@
 		DDB944A227084CD40095570C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDB944A127084CD40095570C /* LoginViewController.swift */; };
 		DDB944A727084CD50095570C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A627084CD50095570C /* Assets.xcassets */; };
 		DDB944AA27084CD50095570C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DDB944A827084CD50095570C /* LaunchScreen.storyboard */; };
+		DDC3DD22276DB141004F1982 /* VideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDC3DD21276DB141004F1982 /* VideoViewController.swift */; };
 		DDCD5059270D63F2004B0A9A /* GoogleTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */; };
 		DDCD505B270D6597004B0A9A /* UITextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */; };
 		DDCD505E270D6ABC004B0A9A /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */; };
@@ -115,6 +116,7 @@
 		DDB944A627084CD50095570C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DDB944A927084CD50095570C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DDB944AB27084CD50095570C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DDC3DD21276DB141004F1982 /* VideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoViewController.swift; sourceTree = "<group>"; };
 		DDCD5058270D63F2004B0A9A /* GoogleTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleTextField.swift; sourceTree = "<group>"; };
 		DDCD505A270D6597004B0A9A /* UITextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extension.swift"; sourceTree = "<group>"; };
 		DDCD505D270D6ABC004B0A9A /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 		DDB944B5270851820095570C /* Screen */ = {
 			isa = PBXGroup;
 			children = (
+				DDC3DD20276DB110004F1982 /* Video */,
 				DD954D52270D553400DD5A9B /* Components */,
 				DDEC8734272873A200C5C993 /* Base */,
 				DD954D49270D48B500DD5A9B /* Auth */,
@@ -328,6 +331,14 @@
 				DDB9449D27084CD40095570C /* AppDelegate.swift */,
 			);
 			path = Surpport;
+			sourceTree = "<group>";
+		};
+		DDC3DD20276DB110004F1982 /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				DDC3DD21276DB141004F1982 /* VideoViewController.swift */,
+			);
+			path = Video;
 			sourceTree = "<group>";
 		};
 		DDCD5055270D6110004B0A9A /* Extension */ = {
@@ -537,6 +548,7 @@
 				DD8111F02722B8EA002D38A0 /* TabBarItems.swift in Sources */,
 				DD81D3D2272AA4650066D159 /* UIApplication+Extension.swift in Sources */,
 				DD3FF76627324DCA0057C80E /* AppCoordinator.swift in Sources */,
+				DDC3DD22276DB141004F1982 /* VideoViewController.swift in Sources */,
 				DD8111E72722A228002D38A0 /* ShortsViewController.swift in Sources */,
 				DDB9449E27084CD40095570C /* AppDelegate.swift in Sources */,
 				DDEC8730272870FE00C5C993 /* Reusable.swift in Sources */,
