@@ -1,22 +1,13 @@
 //
-//  VideoTableViewCell.swift
+//  VideoViewController.swift
 //  Youtube-Clone
 //
-//  Created by 김윤서 on 2021/10/27.
+//  Created by 김윤서 on 2021/12/18.
 //
 
 import UIKit
 
-protocol VideoTableViewCellDelegate: AnyObject {
-    func previewImageViewDidTapped(_ videoTableViewCell: UITableViewCell, video: Video)
-}
-
-class VideoTableViewCell: UITableViewCell {
-    
-// MARK: - Properties
-    weak var delegate: VideoTableViewCellDelegate?
-    
-    private var video: Video?
+class VideoViewController: BaseViewController {
     
     private let previewImageView = UIImageView()
     
@@ -41,62 +32,48 @@ class VideoTableViewCell: UITableViewCell {
         $0.setImage(Const.Image.menu, for: .normal)
     }
     
-// MARK: - View Life Cycle
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    private lazy var dismissButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "chevron.down"), for: .normal)
+        $0.tintColor = .white
+        $0.addTarget(self, action: #selector(buttonDidTapped), for: .touchUpInside)
+    }
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
         setLayouts()
-        registerGesture()
     }
     
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    override func prepareForReuse() {
-        super.prepareForReuse()
-        titleLabel.text = nil
-        previewImageView.image = nil
-        profileImageView.image = nil
-        subtitleLabel.text = nil
-    }
-    
-    private func registerGesture() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(touchImageView))
-        previewImageView.addGestureRecognizer(tapGesture)
-        previewImageView.isUserInteractionEnabled = true
-    }
-    
-    @objc
-    private func touchImageView() {
-        guard let video = video else {return}
-        delegate?.previewImageViewDidTapped(self, video: video)
-    }
-    
-// MARK: - Public Functions
     public func updateData(data: Video) {
-        video = data
         titleLabel.text = data.title
         previewImageView.image = UIImage(named: data.preview)
         profileImageView.image = UIImage(named: data.profile)
         subtitleLabel.text = data.subtitle
     }
     
+    @objc
+    private func buttonDidTapped() {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
-// MARK: - Layout
-extension VideoTableViewCell {
+extension VideoViewController {
     private func setLayouts() {
         setViewHiearachy()
         setConstraints()
     }
     
     private func setViewHiearachy() {
-        contentView.addSubviews(previewImageView, profileImageView, titleLabel, subtitleLabel, moreButton)
+        view.addSubviews(previewImageView, profileImageView, titleLabel, subtitleLabel, moreButton, dismissButton)
     }
     
     private func setConstraints() {
+        
+        dismissButton.snp.makeConstraints {
+            $0.top.leading.equalTo(view.safeAreaLayoutGuide).inset(10)
+        }
+        
         previewImageView.snp.makeConstraints {
-            $0.top.leading.trailing.equalToSuperview()
+            $0.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
             $0.height.equalTo(previewImageView.snp.width).multipliedBy(0.56)
         }
         
@@ -114,7 +91,6 @@ extension VideoTableViewCell {
         
         subtitleLabel.snp.makeConstraints {
             $0.top.equalTo(titleLabel.snp.bottom).offset(4)
-            $0.bottom.equalToSuperview().offset(-25)
             $0.leading.equalTo(titleLabel.snp.leading)
         }
         

@@ -73,6 +73,16 @@ extension HomeViewController {
     }
 }
 
+extension HomeViewController: VideoTableViewCellDelegate {
+    func previewImageViewDidTapped(_ videoTableViewCell: UITableViewCell, video: Video) {
+        let vc = VideoViewController()
+        vc.modalPresentationStyle = .fullScreen
+        vc.updateData(data: video)
+        present(vc, animated: true, completion: nil)
+    }
+}
+
+
 // MARK: - UITableViewDelegate
 extension HomeViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -113,6 +123,7 @@ extension HomeViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(indexPath: indexPath) as VideoTableViewCell
         cell.updateData(data: viedoList[indexPath.row])
+        cell.delegate = self
         return cell
     }
     
